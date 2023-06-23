@@ -7,8 +7,8 @@
                     <div class="fs-3 fw-light text-muted" id="short_title">I can help your business to</div>
                     <h1 class="display-3 fw-bolder mb-5"><span class="text-gradient d-inline" id="title">Get online and grow fast</span></h1>
                     <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start mb-3">
-                        <a class="btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder" href="resume.html">Resume</a>
-                        <a class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder" href="projects.html">Projects</a>
+                        <a class="btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder" href="{{url('/resume')}}">Resume</a>
+                        <a class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder" href="{{url('/projects')}}">Projects</a>
                     </div>
                 </div>
             </div>
@@ -24,14 +24,21 @@
 </header>
 
 <script>
-    GetHeroData();
-    async function GetHeroData(){
-            let res= await axios.get("/heroData");
-            if(res.status===200){
-                document.getElementById('keyLine').innerText=res.data['keyLine']
-                document.getElementById('short_title').innerText=res.data['short_title']
-                document.getElementById('title').innerText=res.data['title']
-                document.getElementById('profileImg').src=res.data['profileImg']
-            }
-    }
+   getHero();
+   async function getHero() {
+
+       try {
+           let URL="/heroData"
+           let response = await axios.get(URL);
+           document.getElementById('keyLine').innerHTML=response.data['keyLine'];
+           document.getElementById('short_title').innerHTML=response.data['short_title'];
+           document.getElementById('title').innerHTML=response.data['title'];
+           document.getElementById('profileImg').src=response.data['img'];
+       }
+       catch (e) {
+           alert(e);
+       }
+
+   }
+
 </script>
