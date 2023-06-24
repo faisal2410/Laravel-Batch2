@@ -29,6 +29,12 @@
 
        try {
            let URL="/heroData"
+
+           document.getElementById('loading-div').classList.remove('d-none');
+           document.getElementById('content-div').classList.add('d-none');
+
+           debugger;
+
            let response = await axios.get(URL);
            document.getElementById('keyLine').innerHTML=response.data['keyLine'];
            document.getElementById('short_title').innerHTML=response.data['short_title'];
