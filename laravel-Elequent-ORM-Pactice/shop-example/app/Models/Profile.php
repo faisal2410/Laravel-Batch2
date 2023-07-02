@@ -8,5 +8,4 @@ use Illuminate\Database\Eloquent\Model;
 class Profile extends Model
 {
 
-    protected $fillable = ['firstName','lastName','mobile','city','shippingAddress','email'];
 }

@@ -9,10 +9,5 @@ use Illuminate\Database\Eloquent\Relations\HasOne;
 class ProductCart extends Model
 {
 
-    protected $fillable = ['email','product_id','color','size'];
 
-    public function product(): HasOne
-    {
-        return $this->hasOne(Product::class,'id');
-    }
 }

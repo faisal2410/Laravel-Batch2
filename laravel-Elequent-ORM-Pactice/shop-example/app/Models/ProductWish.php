@@ -8,9 +8,5 @@ use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class ProductWish extends Model
 {
-    protected $fillable = ['email','product_id'];
-    public function product(): HasOne
-    {
-        return $this->hasOne(Product::class,'id');
-    }
+
 }

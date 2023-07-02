@@ -8,8 +8,5 @@ use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class ProductSlider extends Model
 {
-    public function product(): HasOne
-    {
-        return $this->hasOne(Product::class,'id');
-    }
+
 }

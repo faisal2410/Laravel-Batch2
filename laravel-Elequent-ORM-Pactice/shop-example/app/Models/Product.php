@@ -9,12 +9,5 @@ use Illuminate\Database\Eloquent\Relations\HasOne;
  */
 class Product extends Model
 {
-    public function brand(): HasOne
-    {
-        return $this->hasOne(Brand::class,'id');
-    }
-    public function category(): HasOne
-    {
-        return $this->hasOne(Category::class,'id');
-    }
+
 }
