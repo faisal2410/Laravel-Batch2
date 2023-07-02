@@ -1,0 +1,42 @@
+php artisan make:migration create_users
+php artisan make:migration create_profiles
+php artisan make:migration create_categories
+php artisan make:migration create_brands
+
+
+php artisan make:migration create_product_list
+php artisan make:migration create_product_details
+php artisan make:migration create_product_review
+
+php artisan make:migration create_product_sliders
+php artisan make:migration create_product_wishes
+php artisan make:migration create_product_wish_list
+php artisan make:migration create_product_carts
+
+php artisan make:migration create_product_order_list
+
+
+php artisan make:Controller UserController
+php artisan make:Controller ProfileController
+php artisan make:Controller CategoryController
+php artisan make:Controller BrandController
+
+
+php artisan make:Middleware TokenAuthenticate
+
+
+
+php artisan make:model User
+php artisan make:model Profile
+php artisan make:model Category
+php artisan make:model Brand
+php artisan make:model ProductSlider
+php artisan make:model ProductWish
+php artisan make:model ProductCart
+
+
+
+
+
+Rup774827
+20070246@student.hut.edu.vn
