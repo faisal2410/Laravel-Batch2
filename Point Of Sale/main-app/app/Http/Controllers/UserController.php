@@ -11,7 +11,10 @@ class UserController extends Controller
 {
 
     function UserLogin(Request $request){
-          $res=User::where($request->input())->count();
+          $res=User::where('email',$request->input('email'))
+              ->where('password',$request->input('password'))
+              ->count();
+
           if($res==1){
               $token=JWTToken::CreateToken($request->input('email'));
               return response()->json(['msg'=>"success",'data'=>$token]);
@@ -22,6 +25,7 @@ class UserController extends Controller
     }
 
     function UserRegistration(Request $request){
+
        return User::create($request->input());
     }
 
