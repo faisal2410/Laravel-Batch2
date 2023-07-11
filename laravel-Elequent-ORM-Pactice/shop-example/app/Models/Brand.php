@@ -7,5 +7,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Brand extends Model
 {
+<<<<<<< Updated upstream
     protected $fillable = ['brandName', 'brandImg'];
+=======
+
+
+    protected $fillable= [
+        'brandName',
+        'brandImg'
+    ];
+
+
+>>>>>>> Stashed changes
 }
