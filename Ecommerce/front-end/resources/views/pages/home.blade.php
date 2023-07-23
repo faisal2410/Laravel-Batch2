@@ -1,0 +1,10 @@
+@extends('app')
+@section('content')
+@include('component.AppBar')
+@include('component.CartModal')
+@include('component.AccountModal')
+@include('component.SearchModal')
+@include('component.HomeHero')
+@include('component.Categories')
+@include('component.Featured')
+@endsection
