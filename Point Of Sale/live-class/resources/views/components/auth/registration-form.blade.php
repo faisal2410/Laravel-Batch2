@@ -41,37 +41,49 @@
 </div>
 
 <script>
-   async function onRegistration() {
-        let email=document.getElementById('email').value;
-        let password=document.getElementById('password').value;
-        let firstName=document.getElementById('firstName').value;
-        let lastName=document.getElementById('lastName').value;
-        let mobile=document.getElementById('mobile').value;
+
+
+  async function onRegistration() {
+
+        let email = document.getElementById('email').value;
+        let firstName = document.getElementById('firstName').value;
+        let lastName = document.getElementById('lastName').value;
+        let mobile = document.getElementById('mobile').value;
+        let password = document.getElementById('password').value;
+
         if(email.length===0){
-            errorToast("Email Required !");
-        }
-        else if(password.length===0){
-            errorToast("Password Required !")
+            errorToast('Email is required')
         }
         else if(firstName.length===0){
-            errorToast("First Name Required")
+            errorToast('First Name is required')
         }
         else if(lastName.length===0){
-            errorToast("Last Name Required")
+            errorToast('Last Name is required')
         }
         else if(mobile.length===0){
-            errorToast("Mobile Number Required !")
+            errorToast('Mobile is required')
+        }
+        else if(password.length===0){
+            errorToast('Password is required')
         }
         else{
             showLoader();
-            let res=await axios.post("/user-registration", {firstName:firstName, lastName:lastName, email:email, password:password, mobile:mobile})
+            let res=await axios.post("/user-registration",{
+                email:email,
+                firstName:firstName,
+                lastName:lastName,
+                mobile:mobile,
+                password:password
+            })
             hideLoader();
-            if(res.status===200 && res.data['status']==="success"){
+            if(res.status===200 && res.data['status']==='success'){
                 successToast(res.data['message']);
-                window.location.href="/userLogin"
+                setTimeout(function (){
+                    window.location.href='/userLogin'
+                },2000)
             }
             else{
-                errorToast(res.data['message']);
+                errorToast(res.data['message'])
             }
         }
     }

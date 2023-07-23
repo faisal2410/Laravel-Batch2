@@ -36,7 +36,7 @@ class JWTToken
 
 
 
-    public static function VerifyToken($token):object|string
+    public static function VerifyToken($token):string|object
     {
         try {
             if($token==null){

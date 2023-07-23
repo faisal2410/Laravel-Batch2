@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="row justify-content-center">
+    <div class="row">
         <div class="col-md-12 col-lg-12">
             <div class="card animated fadeIn w-100 p-3">
                 <div class="card-body">
@@ -9,7 +9,7 @@
                         <div class="row m-0 p-0">
                             <div class="col-md-4 p-2">
                                 <label>Email Address</label>
-                                <input id="email" readonly placeholder="User Email" class="form-control" type="email"/>
+                                <input readonly id="email" placeholder="User Email" class="form-control" type="email"/>
                             </div>
                             <div class="col-md-4 p-2">
                                 <label>First Name</label>
@@ -30,7 +30,7 @@
                         </div>
                         <div class="row m-0 p-0">
                             <div class="col-md-4 p-2">
-                                <button onclick="onUpdate()" class="btn mt-3 w-100  btn-primary">Save Change</button>
+                                <button onclick="onUpdate()" class="btn mt-3 w-100  btn-primary">Update</button>
                             </div>
                         </div>
                     </div>
@@ -41,62 +41,63 @@
 </div>
 
 <script>
+    getProfile();
+    async function getProfile(){
+        showLoader();
+        let res=await axios.get("/user-profile")
+        hideLoader();
+        if(res.status===200 && res.data['status']==='success'){
+            let data=res.data['data'];
+            document.getElementById('email').value=data['email'];
+            document.getElementById('firstName').value=data['firstName'];
+            document.getElementById('lastName').value=data['lastName'];
+            document.getElementById('mobile').value=data['mobile'];
+            document.getElementById('password').value=data['password'];
+        }
+        else{
+            errorToast(res.data['message'])
+        }
 
-  profileDetails();
-
-
-  async function profileDetails(){
-
-      showLoader();
-      let res=await axios.get("/user-profile-details");
-      hideLoader();
-
-      if(res.status===200 && res.data['status']==="success"){
-          let data=res.data['data'];
-          document.getElementById('email').value=data['email'];
-          document.getElementById('firstName').value=data['firstName'];
-          document.getElementById('lastName').value=data['lastName'];
-          document.getElementById('mobile').value=data['mobile'];
-          document.getElementById('password').value=data['password'];
-      }
-      else{
-          errorToast(res.data['message']);
-      }
-  }
-
-
-
+    }
 
     async function onUpdate() {
 
-        let password=document.getElementById('password').value;
-        let firstName=document.getElementById('firstName').value;
-        let lastName=document.getElementById('lastName').value;
-        let mobile=document.getElementById('mobile').value;
 
-         if(password.length===0){
-            errorToast("Password Required !")
-        }
-        else if(firstName.length===0){
-            errorToast("First Name Required")
+        let firstName = document.getElementById('firstName').value;
+        let lastName = document.getElementById('lastName').value;
+        let mobile = document.getElementById('mobile').value;
+        let password = document.getElementById('password').value;
+
+        if(firstName.length===0){
+            errorToast('First Name is required')
         }
         else if(lastName.length===0){
-            errorToast("Last Name Required")
+            errorToast('Last Name is required')
         }
         else if(mobile.length===0){
-            errorToast("Mobile Number Required !")
+            errorToast('Mobile is required')
+        }
+        else if(password.length===0){
+            errorToast('Password is required')
         }
         else{
             showLoader();
-            let res=await axios.post("/user-update", {firstName:firstName, lastName:lastName,password:password, mobile:mobile})
+            let res=await axios.post("/user-update",{
+                firstName:firstName,
+                lastName:lastName,
+                mobile:mobile,
+                password:password
+            })
             hideLoader();
-            if(res.status===200 && res.data['status']==="success"){
+            if(res.status===200 && res.data['status']==='success'){
                 successToast(res.data['message']);
-                await profileDetails();
+                await getProfile();
             }
             else{
-                errorToast(res.data['message']);
+                errorToast(res.data['message'])
             }
         }
     }
+
 </script>
+

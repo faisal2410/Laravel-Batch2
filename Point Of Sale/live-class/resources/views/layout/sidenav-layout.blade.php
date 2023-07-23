@@ -42,10 +42,10 @@
                         <h6>User Name</h6>
                         <hr class="user-dropdown-divider  p-0"/>
                     </div>
-                    <a href="{{url("/userProfile")}}" class="side-bar-item">
+                    <a href="{{url('/userProfile')}}" class="side-bar-item">
                         <span class="side-bar-item-caption">Profile</span>
                     </a>
-                    <a href={{url('/logout')}} class="side-bar-item">
+                    <a href="{{url("/logout")}}" class="side-bar-item">
                         <span class="side-bar-item-caption">Logout</span>
                     </a>
                 </div>
@@ -56,6 +56,33 @@
 
 
 <div id="sideNavRef" class="side-nav-open">
+
+    <a href="#Getting-Started" class="side-bar-item">
+        <i class="fa fa-chevron-circle-right  text-dark"></i>
+        <span class="side-bar-item-caption">Dashboard</span>
+    </a>
+
+    <a href="#Getting-Started" class="side-bar-item">
+        <i class="fa fa-chevron-circle-right  text-dark"></i>
+        <span class="side-bar-item-caption">Category</span>
+    </a>
+
+    <a href="#Getting-Started" class="side-bar-item">
+        <i class="fa fa-chevron-circle-right  text-dark"></i>
+        <span class="side-bar-item-caption">Product</span>
+    </a>
+
+    <a href="#Getting-Started" class="side-bar-item">
+        <i class="fa fa-chevron-circle-right  text-dark"></i>
+        <span class="side-bar-item-caption">Invoice</span>
+    </a>
+
+    <a href="#Getting-Started" class="side-bar-item">
+        <i class="fa fa-chevron-circle-right  text-dark"></i>
+        <span class="side-bar-item-caption">Report</span>
+    </a>
+
+
 </div>
 
 
