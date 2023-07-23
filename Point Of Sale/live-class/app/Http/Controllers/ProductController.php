@@ -12,13 +12,14 @@ class ProductController extends Controller
     {
         $user_id=$request->header('id');
 
-
         // Prepare File Name & Path
         $img=$request->file('img');
+
         $t=time();
         $file_name=$img->getClientOriginalName();
         $img_name="{$user_id}-{$t}-{$file_name}";
         $img_url="uploads/{$img_name}";
+
 
         // Upload File
         $img->move(public_path('uploads'),$img_name);
@@ -37,7 +38,6 @@ class ProductController extends Controller
 
     function DeleteProduct(Request $request)
     {
-
         $user_id=$request->header('id');
         $product_id=$request->input('id');
         $filePath=$request->input('file_path');

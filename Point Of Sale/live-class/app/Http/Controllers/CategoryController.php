@@ -21,15 +21,15 @@ class CategoryController extends Controller
     }
 
     function CategoryDelete(Request $request){
-        $customer_id=$request->input('id');
+        $category_id=$request->input('id');
         $user_id=$request->header('id');
-        return Category::where('id',$customer_id)->where('user_id',$user_id)->delete();
+        return Category::where('id',$category_id)->where('user_id',$user_id)->delete();
     }
 
     function CategoryUpdate(Request $request){
-        $customer_id=$request->input('id');
+        $category_id=$request->input('id');
         $user_id=$request->header('id');
-        return Category::where('id',$customer_id)->where('user_id',$user_id)->update([
+        return Category::where('id',$category_id)->where('user_id',$user_id)->update([
             'name'=>$request->input('name'),
         ]);
     }

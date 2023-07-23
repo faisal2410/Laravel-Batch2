@@ -64,6 +64,11 @@
 
     <a href="#Getting-Started" class="side-bar-item">
         <i class="fa fa-chevron-circle-right  text-dark"></i>
+        <span class="side-bar-item-caption">Customer</span>
+    </a>
+
+    <a href="#Getting-Started" class="side-bar-item">
+        <i class="fa fa-chevron-circle-right  text-dark"></i>
         <span class="side-bar-item-caption">Category</span>
     </a>
 

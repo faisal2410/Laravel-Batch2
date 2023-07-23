@@ -7,10 +7,6 @@ use Illuminate\Http\Request;
 
 class CustomerController extends Controller
 {
-    function CustomerList(Request $request){
-        $user_id=$request->header('id');
-        return Customer::where('user_id',$user_id)->get();
-    }
 
     function CustomerCreate(Request $request){
         $user_id=$request->header('id');
@@ -22,11 +18,19 @@ class CustomerController extends Controller
         ]);
     }
 
+
+    function CustomerList(Request $request){
+        $user_id=$request->header('id');
+        return Customer::where('user_id',$user_id)->get();
+    }
+
+
     function CustomerDelete(Request $request){
         $customer_id=$request->input('id');
         $user_id=$request->header('id');
         return Customer::where('id',$customer_id)->where('user_id',$user_id)->delete();
     }
+
 
      function CustomerUpdate(Request $request){
         $customer_id=$request->input('id');

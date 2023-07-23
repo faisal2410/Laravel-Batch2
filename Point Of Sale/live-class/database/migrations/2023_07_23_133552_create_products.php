@@ -23,6 +23,7 @@ return new class extends Migration
             $table->foreign('category_id')->references('id')->on('categories')
                 ->cascadeOnUpdate()->restrictOnDelete();
 
+
             $table->string('name',100);
             $table->string('price',50);
             $table->string('unit',50);
