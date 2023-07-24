@@ -1,4 +1,4 @@
-<div class="container my-12 lg:px-52">
+<div class="container mx-auto my-12 lg:px-52">
       <h2 class="text-2xl text-center my-4">FEATURED PRODUCT</h2>
 
     <div class="tabs my-4  justify-center">
@@ -18,7 +18,7 @@
                 </div>
             </div>
         </div>
-     
+
         <div class="card bg-slate-100 h-auto shadow hover:shadow-xl">
             <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
             <div class="px-4 pb-6 pt-4">

@@ -1,5 +1,5 @@
 
-<div class="bg-slate-100 py-8">
+<div class="bg-slate-100 lg:px-52 py-8">
 <div class="carousel w-full">
   <div id="slide1" class="carousel-item relative w-full">
     <div class="container hero lg:px-52">
@@ -15,7 +15,7 @@
       </div>
     </div>
     </div>
-  </div> 
+  </div>
   <div id="slide2" class="carousel-item relative w-full">
     <div class="container hero  lg:px-52">
       <div class="grid grid-cols-1 hero-content md:grid-cols-1 lg:grid-cols-2">
@@ -30,13 +30,13 @@
       </div>
     </div>
     </div>
-  </div> 
-  
+  </div>
+
 </div>
 
 <div class="flex justify-center w-full gap-2">
-  <a href="#slide1" class="btn btn-circle btn-outline btn-neutral btn-sm">1</a> 
-  <a href="#slide2" class="btn btn-circle btn-outline btn-neutral btn-sm">2</a> 
-  <a href="#slide2" class="btn btn-circle btn-outline btn-neutral btn-sm">3</a> 
+  <a href="#slide1" class="btn btn-circle btn-outline btn-neutral btn-sm">1</a>
+  <a href="#slide2" class="btn btn-circle btn-outline btn-neutral btn-sm">2</a>
+  <a href="#slide2" class="btn btn-circle btn-outline btn-neutral btn-sm">3</a>
 </div>
 </div>

@@ -1,4 +1,4 @@
-<div class="container my-12 lg:px-52">
+<div class="container mx-auto  lg:px-52 my-12 ">
       <h2 class="text-2xl text-center my-1">FEATURED CATEGORIES</h2>
       <h2 class="text-md text-center my-1">Get your desired product from featured category</h2>
 
@@ -28,7 +28,7 @@
       <img class="w-16" src="https://adminapi.applegadgetsbd.com/storage/media/medium/airpods-8799.png"/>
       <h2 class="text-md my-2">Macbook Laptop</h2>
     </a>
-    
+
     <a href="" class="card grayscale hover:grayscale-0 bg-slate-100 items-center  p-6 shadow">
       <img class="w-16" src="https://adminapi.applegadgetsbd.com/storage/media/medium/Overhead%20Headphone-01-1816.png"/>
       <h2 class="text-md my-2">Macbook Laptop</h2>
@@ -55,7 +55,7 @@
       <h2 class="text-md my-2">Macbook Laptop</h2>
     </a>
 
-  
+
 
   </div>
-</div> 
+</div>
