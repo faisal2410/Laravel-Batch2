@@ -1,4 +1,4 @@
-<div class="navbar relative z-50 sticky top-0 lg:px-52 shadow bg-base-100">
+<div class="navbar relative z-50 sticky top-0 lg:px-44 shadow bg-base-100">
   <div class="flex-1">
     <a class="btn btn-ghost normal-case text-xl">
       <img class="w-20" src="{{asset('images/logo.png')}}"/>
@@ -30,7 +30,7 @@
         SEARCH
       </a>
       </li>
-      
+
 
       <li>
         <a onclick="cart_modal.showModal()">

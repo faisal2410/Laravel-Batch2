@@ -1,4 +1,4 @@
-<div class="container mx-auto  lg:px-52 my-12 ">
+<div class="container mx-auto  lg:px-44 my-12 ">
       <h2 class="text-2xl text-center my-1">FEATURED CATEGORIES</h2>
       <h2 class="text-md text-center my-1">Get your desired product from featured category</h2>
 

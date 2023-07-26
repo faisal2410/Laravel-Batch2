@@ -1,5 +1,5 @@
 
-<div class="bg-slate-100 lg:px-52 py-8">
+<div class="bg-slate-100 lg:px-44 py-8">
 <div class="carousel w-full">
   <div id="slide1" class="carousel-item relative w-full">
     <div class="container hero lg:px-52">

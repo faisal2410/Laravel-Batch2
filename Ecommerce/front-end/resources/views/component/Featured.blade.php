@@ -1,4 +1,4 @@
-<div class="container mx-auto my-12 lg:px-52">
+<div class="container mx-auto my-12 lg:px-44">
       <h2 class="text-2xl text-center my-4">FEATURED PRODUCT</h2>
 
     <div class="tabs my-4  justify-center">
