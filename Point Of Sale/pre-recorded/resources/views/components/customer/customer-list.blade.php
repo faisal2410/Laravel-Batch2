@@ -4,7 +4,7 @@
         <div class="card px-5 py-5">
             <div class="row justify-content-between ">
                 <div class="align-items-center col">
-                    <h4>Category</h4>
+                    <h4>Customer</h4>
                 </div>
                 <div class="align-items-center col">
                     <button data-bs-toggle="modal" data-bs-target="#create-modal" class="float-end btn m-0 btn-sm bg-gradient-primary">Create</button>
@@ -15,7 +15,9 @@
                 <thead>
                 <tr class="bg-light">
                     <th>No</th>
-                    <th>Category</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Mobile</th>
                     <th>Action</th>
                 </tr>
                 </thead>
@@ -37,7 +39,7 @@ async function getList() {
 
 
     showLoader();
-    let res=await axios.get("/list-category");
+    let res=await axios.get("/list-customer");
     hideLoader();
 
     let tableList=$("#tableList");
@@ -50,6 +52,8 @@ async function getList() {
         let row=`<tr>
                     <td>${index+1}</td>
                     <td>${item['name']}</td>
+                    <td>${item['email']}</td>
+                    <td>${item['mobile']}</td>
                     <td>
                         <button data-id="${item['id']}" class="btn editBtn btn-sm btn-outline-success">Edit</button>
                         <button data-id="${item['id']}" class="btn deleteBtn btn-sm btn-outline-danger">Delete</button>
@@ -62,8 +66,6 @@ async function getList() {
            let id= $(this).data('id');
            await FillUpUpdateForm(id)
            $("#update-modal").modal('show');
-
-
     })
 
     $('.deleteBtn').on('click',function () {

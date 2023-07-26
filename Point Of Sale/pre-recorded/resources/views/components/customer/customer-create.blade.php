@@ -2,15 +2,19 @@
     <div class="modal-dialog modal-md">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Create Category</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Create Customer</h5>
                 </div>
                 <div class="modal-body">
                     <form id="save-form">
                     <div class="container">
                         <div class="row">
                             <div class="col-12 p-1">
-                                <label class="form-label">Category Name *</label>
-                                <input type="text" class="form-control" id="categoryName">
+                                <label class="form-label">Customer Name *</label>
+                                <input type="text" class="form-control" id="customerName">
+                                <label class="form-label">Customer Email *</label>
+                                <input type="text" class="form-control" id="customerEmail">
+                                <label class="form-label">Customer Mobile *</label>
+                                <input type="text" class="form-control" id="customerMobile">
                             </div>
                         </div>
                     </div>
@@ -29,17 +33,25 @@
 
     async function Save() {
 
-        let categoryName = document.getElementById('categoryName').value;
+        let customerName = document.getElementById('customerName').value;
+        let customerEmail = document.getElementById('customerEmail').value;
+        let customerMobile = document.getElementById('customerMobile').value;
 
-        if (categoryName.length === 0) {
-            errorToast("Category Required !")
+        if (customerName.length === 0) {
+            errorToast("Customer Name Required !")
+        }
+        else if(customerEmail.length===0){
+            errorToast("Customer Email Required !")
+        }
+        else if(customerMobile.length===0){
+            errorToast("Customer Mobile Required !")
         }
         else {
 
             document.getElementById('modal-close').click();
 
             showLoader();
-            let res = await axios.post("/create-category",{name:categoryName})
+            let res = await axios.post("/create-customer",{name:customerName,email:customerEmail,mobile:customerMobile})
             hideLoader();
 
             if(res.status===201){
