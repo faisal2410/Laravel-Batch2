@@ -65,7 +65,7 @@
         }
         else {
 
-            document.getElementById('modal-close').click();
+            document.getElementById('update-modal-close').click();
 
             showLoader();
 
