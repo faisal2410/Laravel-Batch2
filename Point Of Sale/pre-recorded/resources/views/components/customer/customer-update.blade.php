@@ -45,7 +45,6 @@
     }
 
 
-
     async function Update() {
 
         let customerName = document.getElementById('customerNameUpdate').value;
