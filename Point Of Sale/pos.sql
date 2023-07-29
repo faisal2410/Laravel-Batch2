@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jul 25, 2023 at 06:05 AM
+-- Generation Time: Jul 29, 2023 at 09:10 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -59,7 +59,19 @@ INSERT INTO `categories` (`id`, `name`, `user_id`, `created_at`, `updated_at`) V
 (37, 'Rasgulla', 1, '2023-07-23 14:03:34', '2023-07-23 14:03:34'),
 (38, 'Barfi', 1, '2023-07-23 14:03:34', '2023-07-23 14:03:34'),
 (39, 'Jalebi', 1, '2023-07-23 14:03:34', '2023-07-23 14:03:34'),
-(40, 'Ladoo', 1, '2023-07-23 14:03:34', '2023-07-23 14:03:34');
+(40, 'Ladoo', 1, '2023-07-23 14:03:34', '2023-07-23 14:03:34'),
+(42, 'Mango', 1, '2023-07-25 23:27:40', '2023-07-25 23:27:40'),
+(43, 'Mango', 1, '2023-07-25 23:27:50', '2023-07-25 23:27:50'),
+(44, 'demo', 2, '2023-07-25 23:28:55', '2023-07-25 23:28:55'),
+(45, 'Mango', 1, '2023-07-25 23:29:11', '2023-07-25 23:29:11'),
+(46, 'asdasdasd', 1, '2023-07-25 23:30:55', '2023-07-25 23:30:55'),
+(47, 'Example', 1, '2023-07-25 23:31:48', '2023-07-25 23:31:48'),
+(48, 'Demo', 1, '2023-07-25 23:32:41', '2023-07-25 23:32:41'),
+(49, 'Demo', 1, '2023-07-25 23:32:46', '2023-07-25 23:32:46'),
+(50, 'Demo1', 1, '2023-07-25 23:33:32', '2023-07-25 23:33:32'),
+(51, '234w3qrweqreafr', 1, '2023-07-25 23:33:37', '2023-07-25 23:33:37'),
+(52, 'sdfsdfs', 1, '2023-07-25 23:34:31', '2023-07-25 23:34:31'),
+(53, 'r', 1, '2023-07-25 23:34:36', '2023-07-27 05:00:34');
 
 -- --------------------------------------------------------
 
@@ -91,7 +103,6 @@ INSERT INTO `customers` (`id`, `name`, `email`, `mobile`, `user_id`, `created_at
 (7, 'William Turner', 'william.t@example.com', '9998887770', 1, '2023-07-23 13:54:43', '2023-07-23 13:54:43'),
 (8, 'Olivia Martin', 'olivia.m@example.com', '6665554441', 1, '2023-07-23 13:54:43', '2023-07-23 13:54:43'),
 (9, 'James Anderson', 'james.a@example.com', '5554443332', 1, '2023-07-23 13:54:43', '2023-07-23 13:54:43'),
-(10, 'Ava Taylor', 'ava.t@example.com', '2223334445', 1, '2023-07-23 13:54:43', '2023-07-23 13:54:43'),
 (11, 'Rahul Sharma', 'rahul.sharma@example.com', '+91 9876543210', 2, '2023-07-23 13:55:37', '2023-07-23 13:55:37'),
 (12, 'Priya Patel', 'priya.patel@example.com', '+91 8765432109', 2, '2023-07-23 13:55:37', '2023-07-23 13:55:37'),
 (13, 'Amit Singh', 'amit.singh@example.com', '+91 7654321098', 2, '2023-07-23 13:55:37', '2023-07-23 13:55:37'),
@@ -168,7 +179,10 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `user_id`, `category_id`, `name`, `price`, `unit`, `img_url`, `created_at`, `updated_at`) VALUES
-(4, 2, 22, 'ABC', '200', 'kg', 'uploads/2-1690134298-AFP-000398865-1000.webp', '2023-07-24 00:44:58', '2023-07-24 00:51:56');
+(4, 2, 22, 'ABC', '200', 'kg', 'uploads/2-1690134298-AFP-000398865-1000.webp', '2023-07-24 00:44:58', '2023-07-24 00:51:56'),
+(5, 1, 22, 'ABC', '200', 'kg', 'uploads/2-1690134298-AFP-000398865-1000.webp', '2023-07-24 00:44:58', '2023-07-24 00:51:56'),
+(6, 1, 22, 'ABC', '200', 'kg', 'uploads/2-1690134298-AFP-000398865-1000.webp', '2023-07-24 00:44:58', '2023-07-24 00:51:56'),
+(7, 1, 22, 'ABC', '100', 'kg', 'uploads/2-1690134298-AFP-000398865-1000.webp', '2023-07-24 00:44:58', '2023-07-25 16:16:22');
 
 -- --------------------------------------------------------
 
@@ -251,13 +265,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
 
 --
 -- AUTO_INCREMENT for table `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -275,7 +289,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `users`
