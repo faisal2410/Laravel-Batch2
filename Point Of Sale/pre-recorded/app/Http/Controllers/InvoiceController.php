@@ -6,12 +6,19 @@ use Illuminate\Support\Facades\DB;
 use App\Models\Invoice;
 use App\Models\InvoiceProduct;
 use Illuminate\Http\Request;
+use Illuminate\View\View;
 
 
 class InvoiceController extends Controller
 {
 
+    function InvoicePage():View{
+        return view('pages.dashboard.invoice-page');
+    }
 
+    function SalePage():View{
+        return view('pages.dashboard.sale-page');
+    }
 
 
 
@@ -25,12 +32,15 @@ class InvoiceController extends Controller
         $total=$request->input('total');
         $discount=$request->input('discount');
         $vat=$request->input('vat');
+        $payable=$request->input('payable');
+
         $customer_id=$request->input('customer_id');
 
         $invoice= Invoice::create([
             'total'=>$total,
             'discount'=>$discount,
             'vat'=>$vat,
+            'payable'=>$payable,
             'user_id'=>$user_id,
             'customer_id'=>$customer_id,
         ]);

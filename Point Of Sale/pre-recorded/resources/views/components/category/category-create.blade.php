@@ -1,8 +1,8 @@
-<div class="modal" id="create-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-md">
+<div class="modal animated zoomIn" id="create-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-md">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Create Category</h5>
+                    <h6 class="modal-title" id="exampleModalLabel">Create Category</h6>
                 </div>
                 <div class="modal-body">
                     <form id="save-form">

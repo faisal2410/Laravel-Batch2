@@ -4,14 +4,15 @@
         <div class="card px-5 py-5">
             <div class="row justify-content-between ">
                 <div class="align-items-center col">
-                    <h4>Category</h4>
+                    <h6>Category</h6>
                 </div>
                 <div class="align-items-center col">
                     <button data-bs-toggle="modal" data-bs-target="#create-modal" class="float-end btn m-0 btn-sm bg-gradient-primary">Create</button>
                 </div>
             </div>
-            <hr class="bg-dark "/>
-            <table class="table" id="tableData">
+            <hr class="bg-secondary"/>
+            <div class="table-responsive">
+            <table class="table  table-flush" id="tableData">
                 <thead>
                 <tr class="bg-light">
                     <th>No</th>
@@ -23,6 +24,7 @@
 
                 </tbody>
             </table>
+            </div>
         </div>
     </div>
 </div>
@@ -73,9 +75,9 @@ async function getList() {
     })
 
     new DataTable('#tableData',{
-        order:[[0,'desc']],
-        lengthMenu:[5,10,15,20,30]
-    });
+       order:[[0,'desc']],
+       lengthMenu:[5,10,15,20,30]
+   });
 
 }
 

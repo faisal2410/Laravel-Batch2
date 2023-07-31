@@ -1,5 +1,5 @@
 <div class="modal" id="create-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-md">
+    <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Create Product</h5>
@@ -20,8 +20,13 @@
                                 <input type="text" class="form-control" id="productPrice">
                                 <label class="form-label">Unit</label>
                                 <input type="text" class="form-control" id="productUnit">
+
+                                <br/>
+                                <img class="w-15" id="newImg" src="{{asset('images/default.jpg')}}"/>
+                                <br/>
+
                                 <label class="form-label">Image</label>
-                                <input type="file" class="form-control" id="productImg">
+                                <input oninput="newImg.src=window.URL.createObjectURL(this.files[0])" type="file" class="form-control" id="productImg">
                             </div>
                         </div>
                     </div>
@@ -37,6 +42,8 @@
 
 
 <script>
+
+
 
     FillCategoryDropDown();
 
