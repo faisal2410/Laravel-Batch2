@@ -5,9 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Product extends Model
+class InvoiceProduct extends Model
 {
-
-   protected $fillable = ['user_id', 'category_id', 'name', 'price', 'unit', 'img_url'];
-
+    protected $fillable = ['invoice_id', 'product_id', 'qty', 'sale_price'];
 }

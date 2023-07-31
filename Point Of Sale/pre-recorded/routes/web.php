@@ -60,6 +60,19 @@ Route::get("/list-product",[ProductController::class,'ProductList'])->middleware
 Route::post("/product-by-id",[ProductController::class,'ProductByID'])->middleware([TokenVerificationMiddleware::class]);
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Invoice
 Route::post("/invoice-create",[InvoiceController::class,'invoiceCreate'])->middleware([TokenVerificationMiddleware::class]);
 Route::get("/invoice-select",[InvoiceController::class,'invoiceSelect'])->middleware([TokenVerificationMiddleware::class]);

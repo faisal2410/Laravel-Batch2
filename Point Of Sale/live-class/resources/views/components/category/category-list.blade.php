@@ -20,7 +20,7 @@
                 </tr>
                 </thead>
                 <tbody id="tableList">
-                {{--Table Data--}}
+
                 </tbody>
             </table>
         </div>
@@ -33,59 +33,51 @@
 getList();
 
 
-  async function getList() {
-
-      showLoader();
-      let res=await axios.get("/list-category");
-      hideLoader();
+async function getList() {
 
 
-      let tableData=$('#tableData');
-      let tableList=$('#tableList');
+    showLoader();
+    let res=await axios.get("/list-category");
+    hideLoader();
 
-      tableData.DataTable().destroy();
-      tableList.empty();
+    let tableList=$("#tableList");
+    let tableData=$("#tableData");
 
+    tableData.DataTable().destroy();
+    tableList.empty();
 
-
-      res.data.forEach(function (item,index) {
-          let row=`<tr>
+    res.data.forEach(function (item,index) {
+        let row=`<tr>
                     <td>${index+1}</td>
-                    <td>${item.name}</td>
+                    <td>${item['name']}</td>
                     <td>
-                        <button data-id="${item.id}" class="btn edit btn-sm btn-outline-success">Edit</button>
-                        <button data-id="${item.id}" class="btn delete btn-sm btn-outline-danger">Delete</button>
+                        <button data-id="${item['id']}" class="btn editBtn btn-sm btn-outline-success">Edit</button>
+                        <button data-id="${item['id']}" class="btn deleteBtn btn-sm btn-outline-danger">Delete</button>
                     </td>
-                </tr>`;
-          tableList.append(row);
-      })
+                 </tr>`
+        tableList.append(row)
+    })
+
+    $('.editBtn').on('click', async function () {
+           let id= $(this).data('id');
+           await FillUpUpdateForm(id)
+           $("#update-modal").modal('show');
 
 
-      $('.edit').on('click',function () {
-          let id=$(this).data('id');
-          alert(id)
-      })
+    })
 
-      $('.delete').on('click',function () {
-          let id=$(this).data('id');
-          alert(id)
-      })
+    $('.deleteBtn').on('click',function () {
+        let id= $(this).data('id');
+        $("#delete-modal").modal('show');
+        $("#deleteID").val(id);
+    })
 
-      tableData.DataTable({
-          order: [[0, 'desc']],
-          lengthMenu: [5,10,15,20,25,30,35,40,45,50],
-          language:{
-              paginate:{
-                  next: '&#8594;', // or '→'
-                  previous: '&#8592;' // or '←'
-              }}
-      })
-  }
+    new DataTable('#tableData',{
+        order:[[0,'desc']],
+        lengthMenu:[5,10,15,20,30]
+    });
 
-
-
-
-
+}
 
 
 </script>

@@ -4,22 +4,29 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <title></title>
+
     <link rel="icon" type="image/x-icon" href="{{asset('/favicon.ico')}}" />
     <link href="{{asset('css/bootstrap.css')}}" rel="stylesheet" />
     <link href="{{asset('css/animate.min.css')}}" rel="stylesheet" />
     <link href="{{asset('css/fontawesome.css')}}" rel="stylesheet" />
     <link href="{{asset('css/style.css')}}" rel="stylesheet" />
     <link href="{{asset('css/toastify.min.css')}}" rel="stylesheet" />
-    <link href="{{asset('css/datatables.min.css')}}" rel="stylesheet" />
-    <link href="{{asset('css/datatables-select.min.css')}}" rel="stylesheet" />
 
-    <script src="{{asset('js/jquery.min.js')}}"></script>
+    <link href="{{asset('https://cdn.datatables.net/1.13.5/css/dataTables.bootstrap5.min.css')}}" rel="stylesheet" />
+
+
+    <link href="{{asset('css/jquery.dataTables.min.css')}}" rel="stylesheet" />
+    <script src="{{asset('js/jquery-3.7.0.min.js')}}"></script>
+    <script src="{{asset('js/jquery.dataTables.min.js')}}"></script>
+
+
     <script src="{{asset('js/toastify-js.js')}}"></script>
     <script src="{{asset('js/axios.min.js')}}"></script>
     <script src="{{asset('js/config.js')}}"></script>
     <script src="{{asset('js/bootstrap.bundle.js')}}"></script>
-    <script src="{{asset('js/datatables.min.js')}}"></script>
-    <script src="{{asset('js/datatables-select.min.js')}}"></script>
+
+
+
 
 </head>
 
