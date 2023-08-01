@@ -9,6 +9,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-12 p-1">
+
                                 <label class="form-label">Category</label>
                                 <select type="text" class="form-control form-select" id="productCategory">
                                     <option value="">Select Category</option>
@@ -27,6 +28,8 @@
 
                                 <label class="form-label">Image</label>
                                 <input oninput="newImg.src=window.URL.createObjectURL(this.files[0])" type="file" class="form-control" id="productImg">
+
+
                             </div>
                         </div>
                     </div>

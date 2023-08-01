@@ -52,14 +52,13 @@
 
 
 
-    async function FillCategoryDropDown(){
+    async function UpdateFillCategoryDropDown(){
         let res = await axios.get("/list-category")
         res.data.forEach(function (item,i) {
             let option=`<option value="${item['id']}">${item['name']}</option>`
             $("#productCategoryUpdate").append(option);
         })
     }
-
 
 
     async function FillUpUpdateForm(id,filePath){
@@ -70,7 +69,8 @@
 
 
         showLoader();
-        await FillCategoryDropDown();
+        await UpdateFillCategoryDropDown();
+
         let res=await axios.post("/product-by-id",{id:id})
         hideLoader();
 
