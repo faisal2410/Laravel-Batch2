@@ -4,7 +4,6 @@ namespace App\Helper;
 
 use App\Models\SslcommerzAccount;
 use Exception;
-use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\Http;
 
 class SSLCommerz
