@@ -1,7 +1,7 @@
 <?php
 namespace App\Http\Controllers;
 use App\Helper\ResponseHelper;
-use App\Models\Profile;
+use App\Models\CustomerProfile;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
@@ -9,10 +9,10 @@ class ProfileController extends Controller
 {
     public function CreateProfile(Request $request): JsonResponse
     {
-        $UserEmail=$request->header('UserEmail');
-        $request->merge(['email' =>$UserEmail]);
-        $data= Profile::updateOrCreate(
-            ['email' => $UserEmail],
+        $user_id=$request->header('id');
+        $request->merge(['user_id' =>$user_id]);
+        $data= CustomerProfile::updateOrCreate(
+            ['user_id' => $user_id],
             $request->input()
         );
         return ResponseHelper::Out('success',$data,200);
@@ -21,8 +21,8 @@ class ProfileController extends Controller
 
     public function ReadProfile(Request $request): JsonResponse
     {
-        $UserEmail=$request->header('UserEmail');
-        $data=Profile::where('email',$UserEmail)->get();
+        $user_id=$request->header('id');
+        $data=CustomerProfile::where('user_id',$user_id)->with('user')->first();
         return ResponseHelper::Out('success',$data,200);
     }
 

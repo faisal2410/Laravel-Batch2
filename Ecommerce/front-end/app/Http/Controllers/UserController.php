@@ -15,11 +15,11 @@ class UserController extends Controller
     {
         try {
             $UserEmail=$request->UserEmail;
-            $OTP=rand (1000,9999);
+            $OTP=rand (100000,999999);
             $details = ['code' => $OTP];
             Mail::to($UserEmail)->send(new OTPMail($details));
-            $data=User::updateOrCreate(['email' => $UserEmail], ['email'=>$UserEmail,'otp'=>$OTP]);
-            return ResponseHelper::Out('success',"A 4 Digit OTP has been send to your email address",200);
+            User::updateOrCreate(['email' => $UserEmail], ['email'=>$UserEmail,'otp'=>$OTP]);
+            return ResponseHelper::Out('success',"A 6 Digit OTP has been send to your email address",200);
         } catch (Exception $e) {
             return ResponseHelper::Out('fail',$e,200);
         }
@@ -30,17 +30,18 @@ class UserController extends Controller
             $UserEmail=$request->UserEmail;
             $OTP=$request->OTP;
 
-            $verification= User::where('email',$UserEmail)->where('otp',$OTP)->count();
+            $verification= User::where('email',$UserEmail)->where('otp',$OTP)->first();
 
-            if($verification>0){
-                $user= User::updateOrCreate(['email' => $UserEmail], ['email'=>$UserEmail,'otp'=>'0']);
-                $token=JWTToken::CreateToken($UserEmail,$user->id);
+            if($verification){
+                User::where('email',$UserEmail)->where('otp',$OTP)->update(['otp'=>'0']);
+                $token=JWTToken::CreateToken($UserEmail,$verification->id);
                 return  ResponseHelper::Out('success',$token,200)->cookie('token',$token,60*24*30);
             }
             else{
                 return  ResponseHelper::Out('fail',null,401);
             }
     }
+
 
     function UserLogout(){
         return redirect('/userLogin')->cookie('token','',-1);

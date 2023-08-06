@@ -11,20 +11,21 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('product_wishes', function (Blueprint $table) {
-            $table->id();
-            $table->string('email',50);
-            $table->unsignedBigInteger('product_id');
+        Schema::create('product_reviews', function (Blueprint $table) {
 
-            $table->foreign('product_id')->references('id')->on('products')
+            $table->id();
+            $table->string('description',1000);
+            $table->string('rating',10);
+
+            $table->unsignedBigInteger('customer_id');
+            $table->foreign('customer_id')->references('id')->on('customer_profiles')
                 ->restrictOnDelete()
                 ->restrictOnUpdate();
 
-            $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users')
+            $table->unsignedBigInteger('product_id');
+            $table->foreign('product_id')->references('id')->on('products')
                 ->restrictOnDelete()
-                ->cascadeOnUpdate();
-
+                ->restrictOnUpdate();
 
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
@@ -36,6 +37,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('product_wishes');
+        Schema::dropIfExists('product_reviews');
     }
 };

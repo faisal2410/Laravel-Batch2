@@ -29,15 +29,8 @@ class ProductController extends Controller
     }
 
 
-
-
-
-
-
-
-
-    public function ListReviewByProduct(Request $request):JsonResponse{
-        $data=ProductReview::where('product_id',$request->id)->with('profile')->get();
+    public function ListProductSlider():JsonResponse{
+        $data=ProductSlider::all();
         return ResponseHelper::Out('success',$data,200);
     }
 
@@ -46,58 +39,98 @@ class ProductController extends Controller
         return ResponseHelper::Out('success',$data,200);
     }
 
-    public function ListProductSlider():JsonResponse{
-        $data=ProductSlider::all();
+
+
+    public function ListReviewByProduct(Request $request):JsonResponse{
+        $data=ProductReview::where('product_id',$request->product_id)->with(['profile'=>function($query){
+            $query->select('id','cus_name');
+        }])->get();
         return ResponseHelper::Out('success',$data,200);
     }
 
-
     public function CreateProductReview(Request $request):JsonResponse{
-        $UserEmail=$request->header('UserEmail');
-        $request->merge(['email' =>$UserEmail]);
+        $customer_id=$request->header('id');
+        $request->merge(['customer_id' =>$customer_id]);
         $data=ProductReview::updateOrCreate(
-            ['email' => $UserEmail,'product_id'=>$request->input('product_id')],
+            ['customer_id' => $customer_id,'product_id'=>$request->input('product_id')],
             $request->input()
         );
         return ResponseHelper::Out('success',$data,200);
     }
 
+
+
+
     public function ProductWishList(Request $request):JsonResponse{
-        $UserEmail=$request->header('UserEmail');
-        $data=ProductWish::where('email',$UserEmail)->with('product')->get();
+        $user_id=$request->header('id');
+        $data=ProductWish::where('user_id',$user_id)->with('product')->get();
         return ResponseHelper::Out('success',$data,200);
     }
 
     public function CreateWishList(Request $request):JsonResponse{
-        $UserEmail=$request->header('UserEmail');
+        $user_id=$request->header('id');
         $data=ProductWish::updateOrCreate(
-            ['email' => $UserEmail,'product_id'=>$request->id],
-            ['email' => $UserEmail,'product_id'=>$request->id],
+            ['user_id' => $user_id,'product_id'=>$request->product_id],
+            ['user_id' => $user_id,'product_id'=>$request->product_id],
         );
         return ResponseHelper::Out('success',$data,200);
     }
+
+
+    public function RemoveWishList(Request $request):JsonResponse{
+        $user_id=$request->header('id');
+        $data=ProductWish::where(['user_id' => $user_id,'product_id'=>$request->product_id])->delete();
+        return ResponseHelper::Out('success',$data,200);
+    }
+
 
 
     public function CreateCartList(Request $request):JsonResponse{
-        $UserEmail=$request->header('UserEmail');
-        $request->merge(['email' =>$UserEmail]);
+        $user_id=$request->header('id');
+        $product_id =$request->input('product_id');
+        $color=$request->input('color');
+        $size=$request->input('size');
+        $qty=$request->input('qty');
+        $UnitPrice=0;
+
+        $productDetails=Product::where('id','=',$product_id)->first();
+        if($productDetails->discount==1){
+            $UnitPrice=$productDetails->discount_price;
+        }
+        else{
+            $UnitPrice=$productDetails->price;
+        }
+
+        $totalPrice=$qty*$UnitPrice;
+
+
         $data=ProductCart::updateOrCreate(
-            ['email' => $UserEmail,'product_id'=>$request->input('product_id')],
-            $request->input()
+            ['user_id' => $user_id,'product_id'=>$product_id],
+            [
+                'user_id' => $user_id,
+                'product_id'=>$product_id,
+                'color'=>$color,
+                'size'=>$size,
+                'qty'=>$qty,
+                'price'=>$totalPrice
+            ]
         );
+
         return ResponseHelper::Out('success',$data,200);
     }
 
+
+
     public function CartList(Request $request):JsonResponse{
-        $UserEmail=$request->header('UserEmail');
-        $data=ProductCart::where('email',$UserEmail)->with('product')->get();
+        $user_id=$request->header('id');
+        $data=ProductCart::where('user_id',$user_id)->with('product')->get();
         return ResponseHelper::Out('success',$data,200);
     }
 
 
     public function DeleteCartList(Request $request):JsonResponse{
-        $UserEmail=$request->header('UserEmail');
-        $data=ProductCart::where('email',$UserEmail)->where('product_id',$request->id)->delete();
+        $user_id=$request->header('id');
+        $data=ProductCart::where('user_id','=',$user_id)->where('product_id','=',$request->product_id)->delete();
         return ResponseHelper::Out('success',$data,200);
     }
 
