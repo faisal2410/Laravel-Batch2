@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('title',200);
             $table->string('short_des',500);
+            $table->string('price',100);
             $table->string('image',200);
             $table->unsignedBigInteger('product_id')->unique();
             $table->foreign('product_id')->references('id')->on('products')

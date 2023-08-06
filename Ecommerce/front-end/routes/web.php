@@ -11,6 +11,22 @@ use Illuminate\Support\Facades\Route;
 
 
 
+
+// Brand List
+Route::get('/BrandList', [BrandController::class, 'BrandList']);
+
+// Category List
+Route::get('/CategoryList', [CategoryController::class, 'CategoryList']);
+
+
+// Product List
+Route::get('/ListProductByCategory/{id}', [ProductController::class, 'ListProductByCategory']);
+Route::get('/ListProductByBrand/{id}', [ProductController::class, 'ListProductByBrand']);
+Route::get('/ListProductByRemark/{remark}', [ProductController::class, 'ListProductByRemark']);
+
+
+
+
 Route::get('/UserLogin/{UserEmail}', [UserController::class, 'UserLogin']);
 Route::get('/VerifyLogin/{UserEmail}/{OTP}', [UserController::class, 'VerifyLogin']);
 Route::post('/CreateProfile', [ProfileController::class, 'CreateProfile'])->middleware([TokenAuthenticate::class]);
@@ -21,13 +37,11 @@ Route::get('/logout',[UserController::class,'UserLogout']);
 
 Route::get('/', [HomeController::class, 'page']);
 
-Route::get('/BrandList', [BrandController::class, 'BrandList']);
-Route::get('/CategoryList', [CategoryController::class, 'CategoryList']);
 
 
-Route::get('/ListProductByCategory/{id}', [ProductController::class, 'ListProductByCategory']);
-Route::get('/ListProductByBrand/{id}', [ProductController::class, 'ListProductByBrand']);
-Route::get('/ListProductByRemark/{remark}', [ProductController::class, 'ListProductByRemark']);
+
+
+
 
 Route::post('/CreateProductReview', [ProductController::class, 'CreateProductReview'])->middleware([TokenAuthenticate::class]);
 Route::get('/ListReviewByProduct/{id}', [ProductController::class, 'ListReviewByProduct']);
