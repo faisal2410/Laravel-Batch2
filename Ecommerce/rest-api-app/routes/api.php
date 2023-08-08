@@ -1,14 +1,16 @@
 <?php
+
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\CategoryController;
-use App\Http\Controllers\HomeController;
 use App\Http\Controllers\InvoiceController;
 use App\Http\Controllers\PolicyController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
 use App\Http\Middleware\TokenAuthenticate;
-use Illuminate\Support\Facades\Route;
+
 
 // Brand List
 Route::get('/BrandList', [BrandController::class, 'BrandList']);
@@ -58,33 +60,17 @@ Route::get('/DeleteCartList/{product_id}', [ProductController::class, 'DeleteCar
 
 
 // Invoice and payment
-Route::get("/InvoiceCreate",[InvoiceController::class,'InvoiceCreate'])->middleware([TokenAuthenticate::class])->middleware([TokenAuthenticate::class]);
-Route::get("/InvoiceList",[InvoiceController::class,'InvoiceList'])->middleware([TokenAuthenticate::class])->middleware([TokenAuthenticate::class]);
-Route::get("/InvoiceProductList/{invoice_id}",[InvoiceController::class,'InvoiceList'])->middleware([TokenAuthenticate::class])->middleware([TokenAuthenticate::class]);
+Route::get("/InvoiceCreate",[InvoiceController::class,'InvoiceCreate'])->middleware([TokenAuthenticate::class]);
+Route::get("/InvoiceList",[InvoiceController::class,'InvoiceList'])->middleware([TokenAuthenticate::class]);
+Route::get("/InvoiceProductList/{invoice_id}",[InvoiceController::class,'InvoiceProductList'])->middleware([TokenAuthenticate::class]);
 
 
 //payment
 Route::get("/PaymentSuccess",[InvoiceController::class,'PaymentSuccess']);
 Route::get("/PaymentCancel",[InvoiceController::class,'PaymentCancel']);
-Route::get("/PaymentSuccess",[InvoiceController::class,'PaymentSuccess']);
+Route::get("/PaymentFail",[InvoiceController::class,'PaymentFail']);
+Route::post("/PaymentIPN",[InvoiceController::class,'PaymentIPN']);
 
 //policy
 Route::get("/PolicyByType/{type}",[PolicyController::class,'PolicyByType']);
-
-
-// Page
-Route::get('/', [HomeController::class, 'page']);
-
-
-
-
-
-
-
-
-
-
-
-
-
 

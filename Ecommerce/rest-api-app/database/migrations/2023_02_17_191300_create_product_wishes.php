@@ -6,32 +6,21 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
-        Schema::create('invoice_products', function (Blueprint $table) {
+        Schema::create('product_wishes', function (Blueprint $table) {
             $table->id();
 
-            $table->unsignedBigInteger('invoice_id');
             $table->unsignedBigInteger('product_id');
-            $table->unsignedBigInteger('user_id');
-
-            $table->string('qty',50);
-            $table->string('sale_price',50);
-
-
-            $table->foreign('invoice_id')->references('id')->on('invoices')
-                ->cascadeOnUpdate()->restrictOnDelete();
 
             $table->foreign('product_id')->references('id')->on('products')
-                ->cascadeOnUpdate()->restrictOnDelete();
+                ->restrictOnDelete()
+                ->restrictOnUpdate();
 
-
-
+            $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')
-                ->cascadeOnUpdate()->restrictOnDelete();
+                ->restrictOnDelete()
+                ->cascadeOnUpdate();
 
 
             $table->timestamp('created_at')->useCurrent();
@@ -44,6 +33,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('invoice_products');
+        Schema::dropIfExists('product_wishes');
     }
 };
