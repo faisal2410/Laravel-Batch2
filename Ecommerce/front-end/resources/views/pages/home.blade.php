@@ -7,4 +7,5 @@
     @include('component.HomeHero')
     @include('component.Categories')
     @include('component.Featured')
+    @include('component.Brands')
 @endsection
