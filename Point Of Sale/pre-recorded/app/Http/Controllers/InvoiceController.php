@@ -21,7 +21,6 @@ class InvoiceController extends Controller
         return view('pages.dashboard.sale-page');
     }
 
-
     function invoiceCreate(Request $request){
 
         DB::beginTransaction();
@@ -77,25 +76,18 @@ class InvoiceController extends Controller
         return Invoice::where('user_id',$user_id)->with('customer')->get();
     }
 
-
     function InvoiceDetails(Request $request){
-
         $user_id=$request->header('id');
-
         $customerDetails=Customer::where('user_id',$user_id)->where('id',$request->input('cus_id'))->first();
-
-        $invoiceTotal=Invoice::where('user_id',$user_id)->where('id',$request->input('inv_id'))->first();
-
+        $invoiceTotal=Invoice::where('user_id','=',$user_id)->where('id',$request->input('inv_id'))->first();
         $invoiceProduct=InvoiceProduct::where('invoice_id',$request->input('inv_id'))
             ->where('user_id',$user_id)
             ->get();
-
         return array(
             'customer'=>$customerDetails,
             'invoice'=>$invoiceTotal,
             'product'=>$invoiceProduct,
         );
-
     }
 
     function invoiceDelete(Request $request){
