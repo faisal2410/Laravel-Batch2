@@ -1,9 +1,8 @@
 @extends('layout.sidenav-layout')
 @section('content')
-
-
     <div class="container-fluid">
         <div class="row">
+
             <div class="col-md-4 col-lg-4 p-2">
                 <div class="shadow-sm h-100 bg-white rounded-3 p-3">
                     <div class="row">
@@ -46,9 +45,9 @@
                            <p class="text-bold text-xs my-1 text-dark"> VAT(5%): <i class="bi bi-currency-dollar"></i>  <span id="vat"></span></p>
                            <p class="text-bold text-xs my-1 text-dark"> Discount: <i class="bi bi-currency-dollar"></i>  <span id="discount"></span></p>
                            <span class="text-xxs">Discount(%):</span>
-                           <input onkeydown="return false" value="0" min="0" type="number" step="0.25" onchange="DiscountChange()" class="form-control w-40 form-control-sm" id="discount"/>
+                           <input onkeydown="return false" value="0" min="0" type="number" step="0.25" onchange="DiscountChange()" class="form-control w-40 form-control-sm" id="discountP"/>
                            <p>
-                              <button class="btn btn-sm my-2 bg-gradient-primary w-40">Confirm</button>
+                              <button onclick="createInvoice()" class="btn btn-sm my-2 bg-gradient-primary w-40">Confirm</button>
                            </p>
                        </div>
                         <div class="col-12 p-2">
@@ -58,6 +57,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="col-md-4 col-lg-4 p-2">
                 <div class="shadow-sm h-100 bg-white rounded-3 p-3">
                     <table class="table  w-100" id="productTable">
@@ -73,6 +73,7 @@
                     </table>
                 </div>
             </div>
+
             <div class="col-md-4 col-lg-4 p-2">
                 <div class="shadow-sm h-100 bg-white rounded-3 p-3">
                     <table class="table table-sm w-100" id="customerTable">
@@ -88,8 +89,12 @@
                     </table>
                 </div>
             </div>
+
         </div>
     </div>
+
+
+
 
     <div class="modal" id="create-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-md">
@@ -125,7 +130,6 @@
 
 
     <script>
-
 
 
         (async ()=>{
@@ -179,7 +183,7 @@
             let Vat=0;
             let Payable=0;
             let Discount=0;
-            let discountPercentage=(parseFloat(document.getElementById('discount').value));
+            let discountPercentage=(parseFloat(document.getElementById('discountP').value));
 
             InvoiceItemList.forEach((item,index)=>{
                 Total=Total+parseFloat(item['sale_price'])
@@ -232,6 +236,11 @@
         }
 
 
+
+
+
+
+
         function addModal(id,name,price) {
             document.getElementById('PId').value=id
             document.getElementById('PName').value=name
@@ -268,7 +277,6 @@
 
             })
 
-
             new DataTable('#customerTable',{
                 order:[[0,'desc']],
                 scrollCollapse: false,
@@ -278,12 +286,15 @@
         }
 
 
+
+
         async function ProductList(){
             let res=await axios.get("/list-product");
             let productList=$("#productList");
             let productTable=$("#productTable");
             productTable.DataTable().destroy();
             productList.empty();
+
             res.data.forEach(function (item,index) {
                 let row=`<tr class="text-xs">
                         <td> <img class="w-10" src="${item['img_url']}"/> ${item['name']} ($ ${item['price']})</td>
@@ -297,9 +308,7 @@
                 let PName= $(this).data('name');
                 let PPrice= $(this).data('price');
                 let PId= $(this).data('id');
-
                 addModal(PId,PName,PPrice)
-
             })
 
 
@@ -312,6 +321,53 @@
                 lengthChange: false
             });
         }
+
+
+
+
+
+
+      async  function createInvoice() {
+            let total=document.getElementById('total').innerText;
+            let discount=document.getElementById('discount').innerText
+            let vat=document.getElementById('vat').innerText
+            let payable=document.getElementById('payable').innerText
+            let CId=document.getElementById('CId').innerText;
+
+
+            let Data={
+                "total":total,
+                "discount":discount,
+                "vat":vat,
+                "payable":payable,
+                "customer_id":CId,
+                "products":InvoiceItemList
+            }
+
+
+            if(CId.length===0){
+                errorToast("Customer Required !")
+            }
+            else if(InvoiceItemList.length===0){
+                errorToast("Product Required !")
+            }
+            else{
+
+                showLoader();
+                let res=await axios.post("/invoice-create",Data)
+                hideLoader();
+                if(res.data===1){
+                    successToast("Invoice Created");
+                }
+                else{
+                    errorToast("Something Went Wrong")
+                }
+            }
+
+        }
+
+
+
 
     </script>
 
