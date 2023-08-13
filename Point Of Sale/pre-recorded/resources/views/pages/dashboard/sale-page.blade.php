@@ -44,6 +44,7 @@
                            <p class="text-bold text-xs my-1 text-dark"> TOTAL: <i class="bi bi-currency-dollar"></i> <span id="total"></span></p>
                            <p class="text-bold text-xs my-2 text-dark"> PAYABLE: <i class="bi bi-currency-dollar"></i>  <span id="payable"></span></p>
                            <p class="text-bold text-xs my-1 text-dark"> VAT(5%): <i class="bi bi-currency-dollar"></i>  <span id="vat"></span></p>
+                           <p class="text-bold text-xs my-1 text-dark"> Discount: <i class="bi bi-currency-dollar"></i>  <span id="discount"></span></p>
                            <span class="text-xxs">Discount(%):</span>
                            <input onkeydown="return false" value="0" min="0" type="number" step="0.25" onchange="DiscountChange()" class="form-control w-40 form-control-sm" id="discount"/>
                            <p>
@@ -177,6 +178,7 @@
             let Total=0;
             let Vat=0;
             let Payable=0;
+            let Discount=0;
             let discountPercentage=(parseFloat(document.getElementById('discount').value));
 
             InvoiceItemList.forEach((item,index)=>{
@@ -187,6 +189,7 @@
                  Vat= ((Total*5)/100).toFixed(2);
              }
              else {
+                 Discount=(Total*discountPercentage)/100;
                  Total=(Total-((Total*discountPercentage)/100)).toFixed(2);
                  Vat= ((Total*5)/100).toFixed(2);
              }
@@ -196,7 +199,8 @@
 
             document.getElementById('total').innerText=Total;
             document.getElementById('payable').innerText=Payable;
-            document.getElementById('vat').innerText=Vat
+            document.getElementById('vat').innerText=Vat;
+            document.getElementById('discount').innerText=Discount;
         }
 
 
