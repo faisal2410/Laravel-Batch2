@@ -2,7 +2,6 @@
 @section('content')
     <div class="container-fluid">
         <div class="row">
-
             <div class="col-md-4 col-lg-4 p-2">
                 <div class="shadow-sm h-100 bg-white rounded-3 p-3">
                     <div class="row">
@@ -19,7 +18,6 @@
                         </div>
                     </div>
                     <hr class="mx-0 my-2 p-0 bg-secondary"/>
-
                     <div class="row">
                         <div class="col-12">
                             <table class="table w-100" id="invoiceTable">
@@ -238,9 +236,6 @@
 
 
 
-
-
-
         function addModal(id,name,price) {
             document.getElementById('PId').value=id
             document.getElementById('PName').value=name
@@ -286,8 +281,6 @@
         }
 
 
-
-
         async function ProductList(){
             let res=await axios.get("/list-product");
             let productList=$("#productList");
@@ -312,8 +305,6 @@
             })
 
 
-
-
             new DataTable('#productTable',{
                 order:[[0,'desc']],
                 scrollCollapse: false,
@@ -321,9 +312,6 @@
                 lengthChange: false
             });
         }
-
-
-
 
 
 
@@ -357,6 +345,7 @@
                 let res=await axios.post("/invoice-create",Data)
                 hideLoader();
                 if(res.data===1){
+                    window.location.href='/invoicePage'
                     successToast("Invoice Created");
                 }
                 else{
@@ -365,9 +354,6 @@
             }
 
         }
-
-
-
 
     </script>
 

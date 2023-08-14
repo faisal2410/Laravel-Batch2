@@ -151,7 +151,7 @@ class UserController extends Controller
     }
 
     function UserLogout(){
-        return redirect('/userLogin')->cookie('token','',-1);
+        return redirect('/')->cookie('token','',-1);
     }
 
 
