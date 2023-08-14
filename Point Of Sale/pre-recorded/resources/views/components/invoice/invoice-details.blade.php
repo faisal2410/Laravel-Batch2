@@ -27,11 +27,10 @@
                             <div class="col-12">
                                 <table class="table w-100" id="invoiceTable">
                                     <thead class="w-100">
-                                    <tr class="text-xs">
+                                    <tr class="text-xs text-bold">
                                         <td>Name</td>
                                         <td>Qty</td>
                                         <td>Total</td>
-                                        <td>Remove</td>
                                     </tr>
                                     </thead>
                                     <tbody  class="w-100" id="invoiceList">
@@ -62,6 +61,41 @@
 
 
 <script>
+
+
+    async function InvoiceDetails(cus_id,inv_id) {
+
+        showLoader()
+        let res=await axios.post("/invoice-details",{cus_id:cus_id,inv_id:inv_id})
+        hideLoader();
+
+        document.getElementById('CName').innerText=res.data['customer']['name']
+        document.getElementById('CId').innerText=res.data['customer']['user_id']
+        document.getElementById('CEmail').innerText=res.data['customer']['email']
+        document.getElementById('total').innerText=res.data['invoice']['total']
+        document.getElementById('payable').innerText=res.data['invoice']['payable']
+        document.getElementById('vat').innerText=res.data['invoice']['vat']
+        document.getElementById('discount').innerText=res.data['invoice']['discount']
+
+
+        let invoiceList=$('#invoiceList');
+
+        invoiceList.empty();
+
+        res.data['product'].forEach(function (item,index) {
+            let row=`<tr class="text-xs">
+                        <td>${item['product']['name']}</td>
+                        <td>${item['qty']}</td>
+                        <td>${item['sale_price']}</td>
+                     </tr>`
+            invoiceList.append(row)
+        });
+
+
+
+        $("#details-modal").modal('show')
+    }
+
     function PrintPage() {
         let printContents = document.getElementById('invoice').innerHTML;
         let originalContents = document.body.innerHTML;
