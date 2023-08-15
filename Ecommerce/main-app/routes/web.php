@@ -2,7 +2,6 @@
 
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
-
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\InvoiceController;
@@ -15,7 +14,7 @@ use App\Http\Middleware\TokenAuthenticate;
 
 
 // Page Route
-Route::get("/userLoginPage",[UserController::class,'userLoginPage']);
+
 Route::get("/",[HomeController::class,'HomePage']);
 
 
