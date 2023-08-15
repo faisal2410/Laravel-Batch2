@@ -1,5 +1,5 @@
-<div class="modal" id="delete-modal">
-    <div class="modal-dialog">
+<div class="modal animated zoomIn" id="delete-modal">
+    <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-body text-center">
                 <h3 class=" mt-3 text-warning">Delete !</h3>
@@ -9,8 +9,8 @@
             </div>
             <div class="modal-footer justify-content-end">
                 <div>
-                    <button type="button" id="delete-modal-close" class="btn shadow-sm btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                    <button onclick="itemDelete()" type="button" id="confirmDelete" class="btn shadow-sm btn-danger" >Delete</button>
+                    <button type="button" id="delete-modal-close" class="btn mx-2 bg-gradient-primary" data-bs-dismiss="modal">Cancel</button>
+                    <button onclick="itemDelete()" type="button" id="confirmDelete" class="btn  bg-gradient-danger" >Delete</button>
                 </div>
             </div>
         </div>

@@ -1,16 +1,16 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use App\Models\Category;
-use App\Models\Customer;
 use App\Models\Invoice;
-use App\Models\Product;
 use Illuminate\Http\Request;
 use Barryvdh\DomPDF\Facade\Pdf;
 class ReportController extends Controller
 {
 
+
+    function ReportPage(){
+        return view('pages.dashboard.report-page');
+    }
 
     function SalesReport(Request $request){
         $user_id=$request->header('id');

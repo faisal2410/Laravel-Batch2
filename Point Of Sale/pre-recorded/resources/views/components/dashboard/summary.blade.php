@@ -68,7 +68,7 @@
         </div>
 
         <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12 animated fadeIn p-2">
-            <div class="card card-plain h-100 animated fadeIn bg-white">
+            <div class="card card-plain h-100  bg-white">
                 <div class="p-3">
                     <div class="row">
                         <div class="col-9 col-lg-8 col-md-8 col-sm-9">
@@ -91,7 +91,7 @@
 
 
         <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12 animated fadeIn p-2">
-            <div class="card card-plain h-100 animated fadeIn bg-white">
+            <div class="card card-plain h-100 bg-white">
                 <div class="p-3">
                     <div class="row">
                         <div class="col-9 col-lg-8 col-md-8 col-sm-9">
@@ -114,7 +114,7 @@
 
 
         <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12 animated fadeIn p-2">
-            <div class="card card-plain h-100 animated fadeIn bg-white">
+            <div class="card card-plain h-100  bg-white">
                 <div class="p-3">
                     <div class="row">
                         <div class="col-9 col-lg-8 col-md-8 col-sm-9">
@@ -137,7 +137,7 @@
 
 
         <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12 animated fadeIn p-2">
-            <div class="card card-plain h-100 animated fadeIn bg-white">
+            <div class="card card-plain h-100  bg-white">
                 <div class="p-3">
                     <div class="row">
                         <div class="col-9 col-lg-8 col-md-8 col-sm-9">

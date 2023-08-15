@@ -17,8 +17,8 @@
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button id="modal-close" class="btn btn-sm btn-danger" data-bs-dismiss="modal" aria-label="Close">Close</button>
-                    <button onclick="Save()" id="save-btn" class="btn btn-sm  btn-success" >Save</button>
+                    <button id="modal-close" class="btn bg-gradient-primary" data-bs-dismiss="modal" aria-label="Close">Close</button>
+                    <button onclick="Save()" id="save-btn" class="btn bg-gradient-success" >Save</button>
                 </div>
             </div>
     </div>
@@ -26,28 +26,19 @@
 
 
 <script>
-
     async function Save() {
-
         let categoryName = document.getElementById('categoryName').value;
-
         if (categoryName.length === 0) {
             errorToast("Category Required !")
         }
         else {
-
             document.getElementById('modal-close').click();
-
             showLoader();
             let res = await axios.post("/create-category",{name:categoryName})
             hideLoader();
-
             if(res.status===201){
-
                 successToast('Request completed');
-
                 document.getElementById("save-form").reset();
-
                 await getList();
             }
             else{
@@ -55,5 +46,4 @@
             }
         }
     }
-
 </script>

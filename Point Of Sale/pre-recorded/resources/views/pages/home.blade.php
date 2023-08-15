@@ -100,7 +100,7 @@
                             <input class="form-control mb-3" type="text" placeholder="Name">
                             <input class="form-control mb-3" type="email" placeholder="E-mail">
                             <textarea class="form-control mb-3" name="message" cols="30" rows="10" placeholder="Your Message..."></textarea>
-                            <button class="btn btn-primary w-100">Action</button>
+                            <button class="btn bg-gradient-primary w-100">Action</button>
                         </form>
                     </div>
                 </div>

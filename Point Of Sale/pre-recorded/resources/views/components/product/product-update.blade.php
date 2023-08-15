@@ -1,5 +1,5 @@
-<div class="modal" id="update-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
+<div class="modal animated zoomIn" id="update-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">Update Product</h5>
@@ -16,16 +16,18 @@
                                     <option value="">Select Category</option>
                                 </select>
 
-                                <label class="form-label">Name</label>
+                                <label class="form-label mt-2">Name</label>
                                 <input type="text" class="form-control" id="productNameUpdate">
-                                <label class="form-label">Price</label>
+
+                                <label class="form-label mt-2">Price</label>
                                 <input type="text" class="form-control" id="productPriceUpdate">
-                                <label class="form-label">Unit</label>
+
+                                <label class="form-label mt-2">Unit</label>
                                 <input type="text" class="form-control" id="productUnitUpdate">
                                 <br/>
                                 <img class="w-15" id="oldImg" src="{{asset('images/default.jpg')}}"/>
                                 <br/>
-                                <label class="form-label">Image</label>
+                                <label class="form-label mt-2">Image</label>
                                 <input oninput="oldImg.src=window.URL.createObjectURL(this.files[0])"  type="file" class="form-control" id="productImgUpdate">
 
                                 <input type="text" class="d-none" id="updateID">
@@ -39,8 +41,8 @@
             </div>
 
             <div class="modal-footer">
-                <button id="update-modal-close" class="btn btn-sm btn-danger" data-bs-dismiss="modal" aria-label="Close">Close</button>
-                <button onclick="update()" id="update-btn" class="btn btn-sm btn-success" >Update</button>
+                <button id="update-modal-close" class="btn bg-gradient-primary" data-bs-dismiss="modal" aria-label="Close">Close</button>
+                <button onclick="update()" id="update-btn" class="btn bg-gradient-success" >Update</button>
             </div>
 
         </div>

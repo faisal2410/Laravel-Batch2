@@ -1,5 +1,5 @@
-<div class="modal" id="create-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
+<div class="modal animated zoomIn" id="create-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Create Product</h5>
@@ -15,11 +15,13 @@
                                     <option value="">Select Category</option>
                                 </select>
 
-                                <label class="form-label">Name</label>
+                                <label class="form-label mt-2">Name</label>
                                 <input type="text" class="form-control" id="productName">
-                                <label class="form-label">Price</label>
+
+                                <label class="form-label mt-2">Price</label>
                                 <input type="text" class="form-control" id="productPrice">
-                                <label class="form-label">Unit</label>
+
+                                <label class="form-label mt-2">Unit</label>
                                 <input type="text" class="form-control" id="productUnit">
 
                                 <br/>
@@ -29,15 +31,14 @@
                                 <label class="form-label">Image</label>
                                 <input oninput="newImg.src=window.URL.createObjectURL(this.files[0])" type="file" class="form-control" id="productImg">
 
-
                             </div>
                         </div>
                     </div>
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button id="modal-close" class="btn btn-sm btn-danger" data-bs-dismiss="modal" aria-label="Close">Close</button>
-                    <button onclick="Save()" id="save-btn" class="btn btn-sm  btn-success" >Save</button>
+                    <button id="modal-close" class="btn bg-gradient-primary mx-2" data-bs-dismiss="modal" aria-label="Close">Close</button>
+                    <button onclick="Save()" id="save-btn" class="btn bg-gradient-success" >Save</button>
                 </div>
             </div>
     </div>
