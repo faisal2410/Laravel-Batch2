@@ -20,14 +20,12 @@
 
                  <label class="label mt-1">Color </label>
                  <select id="color" class="select select-bordered w-full max-w-xs">
-                     <option>Han Solo</option>
-                     <option>Greedo</option>
+
                  </select>
 
                  <label class="label mt-1">Size </label>
                  <select id="size" class="select select-bordered w-full max-w-xs">
-                     <option>Han Solo</option>
-                     <option>Greedo</option>
+
                  </select>
 
                  <label class="label mt-1">Quantity </label>
@@ -79,6 +77,7 @@
         })
     }
 
+
     function sizeDropDown(size) {
         const sizeArray = size.split(",");
         let sizeList=$("#size");
@@ -114,13 +113,7 @@
            window.location.hre="/login"
        }
 
-
-
-
-
     }
-
-
 
 
 </script>

@@ -6,16 +6,13 @@
     <script src="{{asset("/assets/js/axios.min.js")}}"></script>
     <script src="{{asset("/assets/js/jquery-3.7.0.min.js")}}"></script>
     <script src="{{asset("/assets/js/config.js")}}"></script>
-    <script src="https://cdn.tailwindcss.com"></script
     @vite('resources/css/app.css')
 </head>
 <body>
 
-
 @include('component.AppBar')
 @yield('content')
 @include('component.Footer')
-
 
 </body>
 </html>
