@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 06, 2023 at 09:41 PM
+-- Generation Time: Aug 25, 2023 at 11:25 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -40,10 +40,14 @@ CREATE TABLE `brands` (
 --
 
 INSERT INTO `brands` (`id`, `brandName`, `brandImg`, `created_at`, `updated_at`) VALUES
-(1, 'Apple', 'https://upload.wikimedia.org/wikipedia/commons/a/ab/Apple-logo.png', '2023-08-05 13:40:40', '2023-08-05 13:54:36'),
-(2, 'Apple', 'https://upload.wikimedia.org/wikipedia/commons/a/ab/Apple-logo.png', '2023-08-05 13:40:40', '2023-08-05 13:54:40'),
-(3, 'Apple', 'https://upload.wikimedia.org/wikipedia/commons/a/ab/Apple-logo.png', '2023-08-05 13:40:40', '2023-08-05 13:54:43'),
-(4, 'Apple', 'https://upload.wikimedia.org/wikipedia/commons/a/ab/Apple-logo.png', '2023-08-05 13:40:40', '2023-08-05 13:54:47');
+(1, 'Apple 1', 'https://photo.teamrabbil.com/images/2023/08/15/brands.jpeg', '2023-08-15 12:00:16', '2023-08-15 16:10:04'),
+(2, 'Apple 2', 'https://photo.teamrabbil.com/images/2023/08/15/brands.jpeg', '2023-08-15 12:00:16', '2023-08-15 16:10:05'),
+(3, 'Apple ', 'https://photo.teamrabbil.com/images/2023/08/15/brands.jpeg', '2023-08-15 12:00:16', '2023-08-15 12:00:16'),
+(4, 'Apple ', 'https://photo.teamrabbil.com/images/2023/08/15/brands.jpeg', '2023-08-15 12:00:16', '2023-08-15 12:00:16'),
+(5, 'Apple ', 'https://photo.teamrabbil.com/images/2023/08/15/brands.jpeg', '2023-08-15 12:00:16', '2023-08-15 12:00:16'),
+(6, 'Apple ', 'https://photo.teamrabbil.com/images/2023/08/15/brands.jpeg', '2023-08-15 12:00:16', '2023-08-15 12:00:16'),
+(7, 'Apple ', 'https://photo.teamrabbil.com/images/2023/08/15/brands.jpeg', '2023-08-15 12:00:16', '2023-08-15 12:00:16'),
+(8, 'Apple ', 'https://photo.teamrabbil.com/images/2023/08/15/brands.jpeg', '2023-08-15 12:00:16', '2023-08-15 12:00:16');
 
 -- --------------------------------------------------------
 
@@ -64,10 +68,16 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`id`, `categoryName`, `categoryImg`, `created_at`, `updated_at`) VALUES
-(1, 'Macbook', 'https://static.gadgetandgear.com/image/250x250/fit/tmp/product/20230302_1677735164_773214.jpeg', '2023-08-05 13:57:03', '2023-08-06 06:14:16'),
-(2, 'Macbook', 'https://static.gadgetandgear.com/image/250x250/fit/tmp/product/20230302_1677735164_773214.jpeg', '2023-08-05 13:57:03', '2023-08-06 06:14:19'),
-(3, 'Macbook', 'https://static.gadgetandgear.com/image/250x250/fit/tmp/product/20230302_1677735164_773214.jpeg', '2023-08-05 13:57:03', '2023-08-06 06:14:21'),
-(4, 'Macbook', 'https://static.gadgetandgear.com/image/250x250/fit/tmp/product/20230302_1677735164_773214.jpeg', '2023-08-05 13:57:03', '2023-08-06 06:14:24');
+(1, 'Mac Book 1', 'https://photo.teamrabbil.com/images/2023/08/15/Phones--Tablets-01-3944.png', '2023-08-15 11:59:11', '2023-08-15 16:03:17'),
+(2, 'Mac Book2', 'https://photo.teamrabbil.com/images/2023/08/15/Phones--Tablets-01-3944.png', '2023-08-15 11:59:11', '2023-08-15 16:03:19'),
+(3, 'Mac Book 3', 'https://photo.teamrabbil.com/images/2023/08/15/Phones--Tablets-01-3944.png', '2023-08-15 11:59:11', '2023-08-15 16:03:24'),
+(4, 'Mac Book', 'https://photo.teamrabbil.com/images/2023/08/15/Phones--Tablets-01-3944.png', '2023-08-15 11:59:11', '2023-08-15 11:59:11'),
+(5, 'Mac Book', 'https://photo.teamrabbil.com/images/2023/08/15/Phones--Tablets-01-3944.png', '2023-08-15 11:59:11', '2023-08-15 11:59:11'),
+(6, 'Mac Book', 'https://photo.teamrabbil.com/images/2023/08/15/Phones--Tablets-01-3944.png', '2023-08-15 11:59:11', '2023-08-15 11:59:11'),
+(7, 'Mac Book', 'https://photo.teamrabbil.com/images/2023/08/15/Phones--Tablets-01-3944.png', '2023-08-15 11:59:11', '2023-08-15 11:59:11'),
+(8, 'Mac Book', 'https://photo.teamrabbil.com/images/2023/08/15/Phones--Tablets-01-3944.png', '2023-08-15 11:59:11', '2023-08-15 11:59:11'),
+(9, 'Mac Book', 'https://photo.teamrabbil.com/images/2023/08/15/Phones--Tablets-01-3944.png', '2023-08-15 11:59:11', '2023-08-15 11:59:11'),
+(10, 'Mac Book', 'https://photo.teamrabbil.com/images/2023/08/15/Phones--Tablets-01-3944.png', '2023-08-15 11:59:11', '2023-08-15 11:59:11');
 
 -- --------------------------------------------------------
 
@@ -97,14 +107,6 @@ CREATE TABLE `customer_profiles` (
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Dumping data for table `customer_profiles`
---
-
-INSERT INTO `customer_profiles` (`id`, `cus_name`, `cus_add`, `cus_city`, `cus_state`, `cus_postcode`, `cus_country`, `cus_phone`, `cus_fax`, `ship_name`, `ship_add`, `ship_city`, `ship_state`, `ship_postcode`, `ship_country`, `ship_phone`, `user_id`, `created_at`, `updated_at`) VALUES
-(1, 'Rabbil Hasan Rupom', 'Adabor,Dhaka', 'Dhaka', 'Dhaka', '1200', 'Bangladesh', '01711111111', '01711111111', 'Rabbil Hasan', 'Adabor, Dhaka', 'Dhaka', 'Dhaka', '1200', 'Bangladesh', '', 1, '2023-08-06 07:17:36', '2023-08-06 03:04:35'),
-(3, 'Rabbil Hasan', 'Adabor,Dhaka', 'Dhaka', 'Dhaka', '1200', 'Bangladesh', '01711111111', '01711111111', 'Rabbil Hasan', 'Adabor, Dhaka ', 'Dhaka', 'Dhaka', '1200', 'Bangladesh', '', 2, '2023-08-06 07:17:36', '2023-08-06 07:17:36');
-
 -- --------------------------------------------------------
 
 --
@@ -119,42 +121,13 @@ CREATE TABLE `invoices` (
   `cus_details` varchar(500) NOT NULL,
   `ship_details` varchar(500) NOT NULL,
   `tran_id` varchar(100) NOT NULL,
+  `val_id` varchar(100) NOT NULL DEFAULT '0',
   `delivery_status` enum('Pending','Processing','Completed') NOT NULL,
   `payment_status` varchar(255) NOT NULL,
   `user_id` bigint(20) UNSIGNED NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `invoices`
---
-
-INSERT INTO `invoices` (`id`, `total`, `vat`, `payable`, `cus_details`, `ship_details`, `tran_id`, `delivery_status`, `payment_status`, `user_id`, `created_at`, `updated_at`) VALUES
-(4, '470000', '14100', '484100', 'Name:Rabbil Hasan Rupom,Address:Adabor,Dhaka,City:Dhaka,Phone: 01711111111', 'Name:Rabbil Hasan,Address:Adabor, Dhaka ,City:Dhaka ,Phone: 01711111111', '64cff296d43fb', 'Pending', 'Pending', 1, '2023-08-06 13:20:54', '2023-08-06 13:20:54'),
-(6, '470000', '14100', '484100', 'Name:Rabbil Hasan Rupom,Address:Adabor,Dhaka,City:Dhaka,Phone: 01711111111', 'Name:Rabbil Hasan,Address:Adabor, Dhaka ,City:Dhaka ,Phone: 01711111111', '64cff2e717d2a', 'Pending', 'Pending', 1, '2023-08-06 13:22:15', '2023-08-06 13:22:15'),
-(7, '470000', '14100', '484100', 'Name:Rabbil Hasan Rupom,Address:Adabor,Dhaka,City:Dhaka,Phone: 01711111111', 'Name:Rabbil Hasan,Address:Adabor, Dhaka ,City:Dhaka ,Phone: 01711111111', '64cff2e8761e9', 'Pending', 'Pending', 1, '2023-08-06 13:22:16', '2023-08-06 13:22:16'),
-(8, '470000', '14100', '484100', 'Name:Rabbil Hasan Rupom,Address:Adabor,Dhaka,City:Dhaka,Phone: 01711111111', 'Name:Rabbil Hasan,Address:Adabor, Dhaka ,City:Dhaka ,Phone: 01711111111', '64cff32461d14', 'Pending', 'Pending', 1, '2023-08-06 13:23:16', '2023-08-06 13:23:16'),
-(9, '470000', '14100', '484100', 'Name:Rabbil Hasan Rupom,Address:Adabor,Dhaka,City:Dhaka,Phone: 01711111111', 'Name:Rabbil Hasan,Address:Adabor, Dhaka ,City:Dhaka ,Phone: 01711111111', '64cff38109d05', 'Pending', 'Pending', 1, '2023-08-06 13:24:49', '2023-08-06 13:24:49'),
-(10, '470000', '14100', '484100', 'Name:Rabbil Hasan Rupom,Address:Adabor,Dhaka,City:Dhaka,Phone: 01711111111', 'Name:Rabbil Hasan,Address:Adabor, Dhaka ,City:Dhaka ,Phone: 01711111111', '64cff3e700767', 'Pending', 'Pending', 1, '2023-08-06 13:26:31', '2023-08-06 13:26:31'),
-(11, '470000', '14100', '484100', 'Name:Rabbil Hasan Rupom,Address:Adabor,Dhaka,City:Dhaka,Phone: 01711111111', 'Name:Rabbil Hasan,Address:Adabor, Dhaka ,City:Dhaka ,Phone: 01711111111', '64cff419c1f99', 'Pending', 'Pending', 1, '2023-08-06 13:27:21', '2023-08-06 13:27:21'),
-(12, '470000', '14100', '484100', 'Name:Rabbil Hasan Rupom,Address:Adabor,Dhaka,City:Dhaka,Phone: 01711111111', 'Name:Rabbil Hasan,Address:Adabor, Dhaka ,City:Dhaka ,Phone: 01711111111', '64cff43a83e6d', 'Pending', 'Pending', 1, '2023-08-06 13:27:54', '2023-08-06 13:27:54'),
-(13, '470000', '14100', '484100', 'Name:Rabbil Hasan Rupom,Address:Adabor,Dhaka,City:Dhaka,Phone: 01711111111', 'Name:Rabbil Hasan,Address:Adabor, Dhaka ,City:Dhaka ,Phone: 01711111111', '64cff4737a957', 'Pending', 'Pending', 1, '2023-08-06 13:28:51', '2023-08-06 13:28:51'),
-(14, '470000', '14100', '484100', 'Name:Rabbil Hasan Rupom,Address:Adabor,Dhaka,City:Dhaka,Phone: 01711111111', 'Name:Rabbil Hasan,Address:Adabor, Dhaka ,City:Dhaka ,Phone: 01711111111', '64cff49542442', 'Pending', 'Pending', 1, '2023-08-06 13:29:25', '2023-08-06 13:29:25'),
-(15, '470000', '14100', '484100', 'Name:Rabbil Hasan Rupom,Address:Adabor,Dhaka,City:Dhaka,Phone: 01711111111', 'Name:Rabbil Hasan,Address:Adabor, Dhaka ,City:Dhaka ,Phone: 01711111111', '64cff4be6be5a', 'Pending', 'Pending', 1, '2023-08-06 13:30:06', '2023-08-06 13:30:06'),
-(16, '470000', '14100', '484100', 'Name:Rabbil Hasan Rupom,Address:Adabor,Dhaka,City:Dhaka,Phone: 01711111111', 'Name:Rabbil Hasan,Address:Adabor, Dhaka ,City:Dhaka ,Phone: 01711111111', '64cff4c665e8b', 'Pending', 'Pending', 1, '2023-08-06 13:30:14', '2023-08-06 13:30:14'),
-(18, '470000', '14100', '484100', 'Name:Rabbil Hasan Rupom,Address:Adabor,Dhaka,City:Dhaka,Phone: 01711111111', 'Name:Rabbil Hasan,Address:Adabor, Dhaka ,City:Dhaka ,Phone: 01711111111', '64cff4e849853', 'Pending', 'Pending', 1, '2023-08-06 13:30:48', '2023-08-06 13:30:48'),
-(19, '470000', '14100', '484100', 'Name:Rabbil Hasan Rupom,Address:Adabor,Dhaka,City:Dhaka,Phone: 01711111111', 'Name:Rabbil Hasan,Address:Adabor, Dhaka ,City:Dhaka ,Phone: 01711111111', '64cff5553fa0d', 'Pending', 'Pending', 1, '2023-08-06 13:32:37', '2023-08-06 13:32:37'),
-(20, '470000', '14100', '484100', 'Name:Rabbil Hasan Rupom,Address:Adabor,Dhaka,City:Dhaka,Phone: 01711111111', 'Name:Rabbil Hasan,Address:Adabor, Dhaka ,City:Dhaka ,Phone: 01711111111', '64cff5b5e60a1', 'Pending', 'Pending', 1, '2023-08-06 13:34:13', '2023-08-06 13:34:13'),
-(21, '470000', '14100', '484100', 'Name:Rabbil Hasan Rupom,Address:Adabor,Dhaka,City:Dhaka,Phone: 01711111111', 'Name:Rabbil Hasan,Address:Adabor, Dhaka ,City:Dhaka ,Phone: 01711111111', '64cff5c3bb06e', 'Pending', 'Pending', 1, '2023-08-06 13:34:27', '2023-08-06 13:34:27'),
-(22, '470000', '14100', '484100', 'Name:Rabbil Hasan Rupom,Address:Adabor,Dhaka,City:Dhaka,Phone: 01711111111', 'Name:Rabbil Hasan,Address:Adabor, Dhaka ,City:Dhaka ,Phone: 01711111111', '64cff62b5544a', 'Pending', 'Pending', 1, '2023-08-06 13:36:11', '2023-08-06 13:36:11'),
-(23, '470000', '14100', '484100', 'Name:Rabbil Hasan Rupom,Address:Adabor,Dhaka,City:Dhaka,Phone: 01711111111', 'Name:Rabbil Hasan,Address:Adabor, Dhaka ,City:Dhaka ,Phone: 01711111111', '64cff63c926b1', 'Pending', 'Pending', 1, '2023-08-06 13:36:28', '2023-08-06 13:36:28'),
-(24, '470000', '14100', '484100', 'Name:Rabbil Hasan Rupom,Address:Adabor,Dhaka,City:Dhaka,Phone: 01711111111', 'Name:Rabbil Hasan,Address:Adabor, Dhaka ,City:Dhaka ,Phone: 01711111111', '64cff65c586f1', 'Pending', 'Pending', 1, '2023-08-06 13:37:00', '2023-08-06 13:37:00'),
-(25, '470000', '14100', '484100', 'Name:Rabbil Hasan Rupom,Address:Adabor,Dhaka,City:Dhaka,Phone: 01711111111', 'Name:Rabbil Hasan,Address:Adabor, Dhaka ,City:Dhaka ,Phone: 01711111111', '64cff6b8b82de', 'Pending', 'Pending', 1, '2023-08-06 13:38:32', '2023-08-06 13:38:32'),
-(26, '470000', '14100', '484100', 'Name:Rabbil Hasan Rupom,Address:Adabor,Dhaka,City:Dhaka,Phone: 01711111111', 'Name:Rabbil Hasan,Address:Adabor, Dhaka ,City:Dhaka ,Phone: 01711111111', '64cff71238405', 'Pending', 'Pending', 1, '2023-08-06 13:40:02', '2023-08-06 13:40:02'),
-(27, '470000', '14100', '484100', 'Name:Rabbil Hasan Rupom,Address:Adabor,Dhaka,City:Dhaka,Phone: 01711111111', 'Name:Rabbil Hasan,Address:Adabor, Dhaka ,City:Dhaka ,Phone: 01711111111', '64cff7161451e', 'Pending', 'Pending', 1, '2023-08-06 13:40:06', '2023-08-06 13:40:06'),
-(28, '470000', '14100', '484100', 'Name:Rabbil Hasan Rupom,Address:Adabor,Dhaka,City:Dhaka,Phone: 01711111111', 'Name:Rabbil Hasan,Address:Adabor, Dhaka ,City:Dhaka ,Phone: 01711111111', '64cff751b7469', 'Pending', 'Pending', 1, '2023-08-06 13:41:05', '2023-08-06 13:41:05'),
-(29, '470000', '14100', '484100', 'Name:Rabbil Hasan Rupom,Address:Adabor,Dhaka,City:Dhaka,Phone: 01711111111', 'Name:Rabbil Hasan,Address:Adabor, Dhaka ,City:Dhaka ,Phone: 01711111111', '64cff768d35dd', 'Pending', 'Pending', 1, '2023-08-06 13:41:28', '2023-08-06 13:41:28');
 
 -- --------------------------------------------------------
 
@@ -166,41 +139,12 @@ CREATE TABLE `invoice_products` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `invoice_id` bigint(20) UNSIGNED NOT NULL,
   `product_id` bigint(20) UNSIGNED NOT NULL,
+  `user_id` bigint(20) UNSIGNED NOT NULL,
   `qty` varchar(50) NOT NULL,
   `sale_price` varchar(50) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `invoice_products`
---
-
-INSERT INTO `invoice_products` (`id`, `invoice_id`, `product_id`, `qty`, `sale_price`, `created_at`, `updated_at`) VALUES
-(3, 4, 5, '5', '470000', '2023-08-06 13:20:54', '2023-08-06 13:20:54'),
-(5, 6, 5, '5', '470000', '2023-08-06 13:22:15', '2023-08-06 13:22:15'),
-(6, 7, 5, '5', '470000', '2023-08-06 13:22:16', '2023-08-06 13:22:16'),
-(7, 8, 5, '5', '470000', '2023-08-06 13:23:16', '2023-08-06 13:23:16'),
-(8, 9, 5, '5', '470000', '2023-08-06 13:24:49', '2023-08-06 13:24:49'),
-(9, 10, 5, '5', '470000', '2023-08-06 13:26:31', '2023-08-06 13:26:31'),
-(10, 11, 5, '5', '470000', '2023-08-06 13:27:21', '2023-08-06 13:27:21'),
-(11, 12, 5, '5', '470000', '2023-08-06 13:27:54', '2023-08-06 13:27:54'),
-(12, 13, 5, '5', '470000', '2023-08-06 13:28:51', '2023-08-06 13:28:51'),
-(13, 14, 5, '5', '470000', '2023-08-06 13:29:25', '2023-08-06 13:29:25'),
-(14, 15, 5, '5', '470000', '2023-08-06 13:30:06', '2023-08-06 13:30:06'),
-(15, 16, 5, '5', '470000', '2023-08-06 13:30:14', '2023-08-06 13:30:14'),
-(17, 18, 5, '5', '470000', '2023-08-06 13:30:48', '2023-08-06 13:30:48'),
-(18, 19, 5, '5', '470000', '2023-08-06 13:32:37', '2023-08-06 13:32:37'),
-(19, 20, 5, '5', '470000', '2023-08-06 13:34:13', '2023-08-06 13:34:13'),
-(20, 21, 5, '5', '470000', '2023-08-06 13:34:27', '2023-08-06 13:34:27'),
-(21, 22, 5, '5', '470000', '2023-08-06 13:36:11', '2023-08-06 13:36:11'),
-(22, 23, 5, '5', '470000', '2023-08-06 13:36:28', '2023-08-06 13:36:28'),
-(23, 24, 5, '5', '470000', '2023-08-06 13:37:00', '2023-08-06 13:37:00'),
-(24, 25, 5, '5', '470000', '2023-08-06 13:38:32', '2023-08-06 13:38:32'),
-(25, 26, 5, '5', '470000', '2023-08-06 13:40:02', '2023-08-06 13:40:02'),
-(26, 27, 5, '5', '470000', '2023-08-06 13:40:06', '2023-08-06 13:40:06'),
-(27, 28, 5, '5', '470000', '2023-08-06 13:41:05', '2023-08-06 13:41:05'),
-(28, 29, 5, '5', '470000', '2023-08-06 13:41:28', '2023-08-06 13:41:28');
 
 -- --------------------------------------------------------
 
@@ -220,19 +164,20 @@ CREATE TABLE `migrations` (
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (1, '2019_12_14_000001_create_personal_access_tokens_table', 1),
-(2, '2023_02_16_065654_create_brands', 1),
-(3, '2023_02_16_065529_create_categories', 2),
-(4, '2023_02_17_114815_create_products', 3),
-(5, '2023_02_17_184723_create_product_sliders', 4),
-(6, '2023_02_17_164424_create_product_details', 5),
-(7, '2023_02_16_065502_create_users', 6),
-(9, '2023_02_16_065520_create_customer_profiles', 7),
-(10, '2023_02_17_144756_create_product_reviews', 8),
-(11, '2023_02_17_191300_create_product_wishes', 9),
-(15, '2023_02_17_194301_create_product_carts', 10),
-(16, '2023_08_06_131501_create_sslcommerz_accounts', 11),
-(17, '2023_08_06_131940_create_invoices', 12),
-(18, '2023_08_06_131941_create_invoice_products', 12);
+(2, '2023_02_16_065502_create_users', 1),
+(3, '2023_02_16_065520_create_customer_profiles', 1),
+(4, '2023_02_16_065529_create_categories', 1),
+(5, '2023_02_16_065654_create_brands', 1),
+(6, '2023_02_17_114815_create_products', 1),
+(7, '2023_02_17_144756_create_product_reviews', 1),
+(8, '2023_02_17_164424_create_product_details', 1),
+(9, '2023_02_17_184723_create_product_sliders', 1),
+(10, '2023_02_17_191300_create_product_wishes', 1),
+(11, '2023_02_17_194301_create_product_carts', 1),
+(12, '2023_08_06_131501_create_sslcommerz_accounts', 1),
+(13, '2023_08_06_131940_create_invoices', 1),
+(14, '2023_08_06_131941_create_invoice_products', 1),
+(15, '2023_08_08_051859_create_policies', 1);
 
 -- --------------------------------------------------------
 
@@ -252,6 +197,30 @@ CREATE TABLE `personal_access_tokens` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `policies`
+--
+
+CREATE TABLE `policies` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `type` enum('about','refund','terms','how to buy','contact','complain') NOT NULL,
+  `des` longtext NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `policies`
+--
+
+INSERT INTO `policies` (`id`, `type`, `des`) VALUES
+(1, 'about', '<p><strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>\r\n<p><strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>\r\n<p><strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>\r\n<p><strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>\r\n<p><strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>'),
+(2, 'refund', '<p><strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>\r\n<p><strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>\r\n<p><strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>\r\n<p><strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>\r\n<p><strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>'),
+(3, 'terms', '<p><strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>\r\n<p><strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>\r\n<p><strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>\r\n<p><strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>\r\n<p><strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>'),
+(4, 'how to buy', '<p><strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>\r\n<p><strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>\r\n<p><strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>\r\n<p><strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>\r\n<p><strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>'),
+(5, 'contact', '<p><strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>\r\n<p><strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>\r\n<p><strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>\r\n<p><strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>\r\n<p><strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>'),
+(6, 'complain', '<p><strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>\r\n<p><strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>\r\n<p><strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>\r\n<p><strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>\r\n<p><strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>');
 
 -- --------------------------------------------------------
 
@@ -281,13 +250,47 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `title`, `short_des`, `price`, `discount`, `discount_price`, `image`, `stock`, `star`, `remark`, `category_id`, `brand_id`, `created_at`, `updated_at`) VALUES
-(2, 'MacBook Air M1 8/256GB 13-inch Space Gray', 'MacBook Air M1 8/256GB 13-inch Space Gray', '94000', 0, '100', 'https://static.gadgetandgear.com/image/250x250/fit/tmp/product/20230302_1677735164_773214.jpeg', 1, 4.80, 'popular', 1, 1, '2023-08-05 16:20:04', '2023-08-06 06:13:43'),
-(3, 'MacBook Air M1 8/256GB 13-inch Space Gray', 'MacBook Air M1 8/256GB 13-inch Space Gray', '94000', 0, '100', 'https://static.gadgetandgear.com/image/250x250/fit/tmp/product/20230302_1677735164_773214.jpeg', 1, 4.80, 'popular', 1, 1, '2023-08-05 16:20:04', '2023-08-06 06:13:49'),
-(4, 'MacBook Air M1 8/256GB 13-inch Space Gray', 'MacBook Air M1 8/256GB 13-inch Space Gray', '94000', 1, '100', 'https://static.gadgetandgear.com/image/250x250/fit/tmp/product/20230302_1677735164_773214.jpeg', 1, 4.80, 'popular', 1, 1, '2023-08-05 16:20:04', '2023-08-06 13:01:58'),
-(5, 'MacBook Air M1 8/256GB 13-inch Space Gray', 'MacBook Air M1 8/256GB 13-inch Space Gray', '94000', 0, '100', 'https://static.gadgetandgear.com/image/250x250/fit/tmp/product/20230302_1677735164_773214.jpeg', 1, 4.80, 'popular', 1, 1, '2023-08-05 16:20:04', '2023-08-06 06:13:54'),
-(6, 'MacBook Air M1 8/256GB 13-inch Space Gray', 'MacBook Air M1 8/256GB 13-inch Space Gray', '94000', 0, '100', 'https://static.gadgetandgear.com/image/250x250/fit/tmp/product/20230302_1677735164_773214.jpeg', 1, 4.80, 'popular', 1, 1, '2023-08-05 16:20:04', '2023-08-06 06:13:58'),
-(7, 'MacBook Air M1 8/256GB 13-inch Space Gray', 'MacBook Air M1 8/256GB 13-inch Space Gray', '94000', 0, '100', 'https://static.gadgetandgear.com/image/250x250/fit/tmp/product/20230302_1677735164_773214.jpeg', 1, 4.80, 'popular', 1, 1, '2023-08-05 16:20:04', '2023-08-06 06:14:03'),
-(8, 'MacBook Air M1 8/256GB 13-inch Space Gray', 'MacBook Air M1 8/256GB 13-inch Space Gray', '94000', 0, '100', 'https://static.gadgetandgear.com/image/250x250/fit/tmp/product/20230302_1677735164_773214.jpeg', 1, 4.80, 'popular', 1, 1, '2023-08-05 16:20:04', '2023-08-06 06:14:05');
+(1, 'MacBook Air M1 8/256GB 13-inch Space Gray', 'MacBook Air M1 8/256GB 13-inch Space Gray', '94000', 0, '0', 'https://photo.teamrabbil.com/images/2023/08/15/macbooks-2048px-2349.jpeg', 1, 4.00, 'new', 1, 1, '2023-08-15 12:24:06', '2023-08-20 13:47:52'),
+(2, 'MacBook Air M1 8/256GB 13-inch Space Gray', 'MacBook Air M1 8/256GB 13-inch Space Gray', '94000', 0, '0', 'https://photo.teamrabbil.com/images/2023/08/15/macbooks-2048px-2349.jpeg', 1, 4.00, 'new', 1, 1, '2023-08-15 12:24:06', '2023-08-20 15:22:37'),
+(3, 'MacBook Air M1 8/256GB 13-inch Space Gray', 'MacBook Air M1 8/256GB 13-inch Space Gray', '94000', 0, '0', 'https://photo.teamrabbil.com/images/2023/08/15/macbooks-2048px-2349.jpeg', 1, 4.00, 'regular', 1, 1, '2023-08-15 12:24:06', '2023-08-15 12:24:06'),
+(4, 'MacBook Air M1 8/256GB 13-inch Space Gray', 'MacBook Air M1 8/256GB 13-inch Space Gray', '94000', 0, '0', 'https://photo.teamrabbil.com/images/2023/08/15/macbooks-2048px-2349.jpeg', 1, 4.00, 'regular', 1, 1, '2023-08-15 12:24:06', '2023-08-15 12:24:06'),
+(5, 'MacBook Air M1 8/256GB 13-inch Space Gray', 'MacBook Air M1 8/256GB 13-inch Space Gray', '94000', 0, '0', 'https://photo.teamrabbil.com/images/2023/08/15/macbooks-2048px-2349.jpeg', 1, 4.00, 'regular', 1, 1, '2023-08-15 12:24:06', '2023-08-15 12:24:06'),
+(6, 'MacBook Air M1 8/256GB 13-inch Space Gray', 'MacBook Air M1 8/256GB 13-inch Space Gray', '94000', 0, '0', 'https://photo.teamrabbil.com/images/2023/08/15/macbooks-2048px-2349.jpeg', 1, 4.00, 'regular', 1, 1, '2023-08-15 12:24:06', '2023-08-15 12:24:06'),
+(7, 'MacBook Air M1 8/256GB 13-inch Space Gray', 'MacBook Air M1 8/256GB 13-inch Space Gray', '94000', 0, '0', 'https://photo.teamrabbil.com/images/2023/08/15/macbooks-2048px-2349.jpeg', 1, 4.00, 'regular', 1, 1, '2023-08-15 12:24:06', '2023-08-15 12:24:06'),
+(8, 'MacBook Air M1 8/256GB 13-inch Space Gray', 'MacBook Air M1 8/256GB 13-inch Space Gray', '94000', 0, '0', 'https://photo.teamrabbil.com/images/2023/08/15/macbooks-2048px-2349.jpeg', 1, 4.00, 'regular', 1, 1, '2023-08-15 12:24:06', '2023-08-15 12:24:06'),
+(9, 'MacBook Air M1 8/256GB 13-inch Space Gray', 'MacBook Air M1 8/256GB 13-inch Space Gray', '94000', 0, '0', 'https://photo.teamrabbil.com/images/2023/08/15/macbooks-2048px-2349.jpeg', 1, 4.00, 'popular', 1, 1, '2023-08-15 12:24:06', '2023-08-15 12:24:06'),
+(10, 'MacBook Air M1 8/256GB 13-inch Space Gray', 'MacBook Air M1 8/256GB 13-inch Space Gray', '94000', 0, '0', 'https://photo.teamrabbil.com/images/2023/08/15/macbooks-2048px-2349.jpeg', 1, 4.00, 'popular', 1, 1, '2023-08-15 12:24:06', '2023-08-15 12:24:06'),
+(11, 'MacBook Air M1 8/256GB 13-inch Space Gray', 'MacBook Air M1 8/256GB 13-inch Space Gray', '94000', 0, '0', 'https://photo.teamrabbil.com/images/2023/08/15/macbooks-2048px-2349.jpeg', 1, 4.00, 'popular', 1, 1, '2023-08-15 12:24:06', '2023-08-15 12:24:06'),
+(12, 'MacBook Air M1 8/256GB 13-inch Space Gray', 'MacBook Air M1 8/256GB 13-inch Space Gray', '94000', 0, '0', 'https://photo.teamrabbil.com/images/2023/08/15/macbooks-2048px-2349.jpeg', 1, 4.00, 'popular', 1, 1, '2023-08-15 12:24:06', '2023-08-15 12:24:06'),
+(13, 'MacBook Air M1 8/256GB 13-inch Space Gray', 'MacBook Air M1 8/256GB 13-inch Space Gray', '94000', 0, '0', 'https://photo.teamrabbil.com/images/2023/08/15/macbooks-2048px-2349.jpeg', 1, 4.00, 'popular', 1, 1, '2023-08-15 12:24:06', '2023-08-15 12:24:06'),
+(14, 'MacBook Air M1 8/256GB 13-inch Space Gray', 'MacBook Air M1 8/256GB 13-inch Space Gray', '94000', 0, '0', 'https://photo.teamrabbil.com/images/2023/08/15/macbooks-2048px-2349.jpeg', 1, 4.00, 'popular', 1, 1, '2023-08-15 12:24:06', '2023-08-15 12:24:06'),
+(15, 'MacBook Air M1 8/256GB 13-inch Space Gray', 'MacBook Air M1 8/256GB 13-inch Space Gray', '94000', 0, '0', 'https://photo.teamrabbil.com/images/2023/08/15/macbooks-2048px-2349.jpeg', 1, 4.00, 'popular', 1, 1, '2023-08-15 12:24:06', '2023-08-15 12:24:06'),
+(16, 'MacBook Air M1 8/256GB 13-inch Space Gray', 'MacBook Air M1 8/256GB 13-inch Space Gray', '94000', 0, '0', 'https://photo.teamrabbil.com/images/2023/08/15/macbooks-2048px-2349.jpeg', 1, 4.00, 'popular', 1, 1, '2023-08-15 12:24:06', '2023-08-15 12:24:06'),
+(17, 'MacBook Air M1 8/256GB 13-inch Space Gray', 'MacBook Air M1 8/256GB 13-inch Space Gray', '94000', 0, '0', 'https://photo.teamrabbil.com/images/2023/08/15/macbooks-2048px-2349.jpeg', 1, 4.00, 'new', 1, 1, '2023-08-15 12:24:06', '2023-08-15 12:24:06'),
+(18, 'MacBook Air M1 8/256GB 13-inch Space Gray', 'MacBook Air M1 8/256GB 13-inch Space Gray', '94000', 0, '0', 'https://photo.teamrabbil.com/images/2023/08/15/macbooks-2048px-2349.jpeg', 1, 4.00, 'new', 1, 1, '2023-08-15 12:24:06', '2023-08-15 12:24:06'),
+(19, 'MacBook Air M1 8/256GB 13-inch Space Gray', 'MacBook Air M1 8/256GB 13-inch Space Gray', '94000', 0, '0', 'https://photo.teamrabbil.com/images/2023/08/15/macbooks-2048px-2349.jpeg', 1, 4.00, 'new', 1, 1, '2023-08-15 12:24:06', '2023-08-15 12:24:06'),
+(20, 'MacBook Air M1 8/256GB 13-inch Space Gray', 'MacBook Air M1 8/256GB 13-inch Space Gray', '94000', 0, '0', 'https://photo.teamrabbil.com/images/2023/08/15/macbooks-2048px-2349.jpeg', 1, 4.00, 'new', 1, 1, '2023-08-15 12:24:06', '2023-08-15 12:24:06'),
+(21, 'MacBook Air M1 8/256GB 13-inch Space Gray', 'MacBook Air M1 8/256GB 13-inch Space Gray', '94000', 0, '0', 'https://photo.teamrabbil.com/images/2023/08/15/macbooks-2048px-2349.jpeg', 1, 4.00, 'new', 1, 1, '2023-08-15 12:24:06', '2023-08-15 12:24:06'),
+(22, 'MacBook Air M1 8/256GB 13-inch Space Gray', 'MacBook Air M1 8/256GB 13-inch Space Gray', '94000', 0, '0', 'https://photo.teamrabbil.com/images/2023/08/15/macbooks-2048px-2349.jpeg', 1, 4.00, 'new', 1, 1, '2023-08-15 12:24:06', '2023-08-15 12:24:06'),
+(23, 'MacBook Air M1 8/256GB 13-inch Space Gray', 'MacBook Air M1 8/256GB 13-inch Space Gray', '94000', 0, '0', 'https://photo.teamrabbil.com/images/2023/08/15/macbooks-2048px-2349.jpeg', 1, 4.00, 'new', 1, 1, '2023-08-15 12:24:06', '2023-08-15 12:24:06'),
+(24, 'MacBook Air M1 8/256GB 13-inch Space Gray', 'MacBook Air M1 8/256GB 13-inch Space Gray', '94000', 0, '0', 'https://photo.teamrabbil.com/images/2023/08/15/macbooks-2048px-2349.jpeg', 1, 4.00, 'new', 1, 1, '2023-08-15 12:24:06', '2023-08-15 12:24:06'),
+(25, 'MacBook Air M1 8/256GB 13-inch Space Gray', 'MacBook Air M1 8/256GB 13-inch Space Gray', '94000', 0, '0', 'https://photo.teamrabbil.com/images/2023/08/15/macbooks-2048px-2349.jpeg', 1, 4.00, 'top', 1, 1, '2023-08-15 12:24:06', '2023-08-15 12:24:06'),
+(26, 'MacBook Air M1 8/256GB 13-inch Space Gray', 'MacBook Air M1 8/256GB 13-inch Space Gray', '94000', 0, '0', 'https://photo.teamrabbil.com/images/2023/08/15/macbooks-2048px-2349.jpeg', 1, 4.00, 'top', 1, 1, '2023-08-15 12:24:06', '2023-08-15 12:24:06'),
+(27, 'MacBook Air M1 8/256GB 13-inch Space Gray', 'MacBook Air M1 8/256GB 13-inch Space Gray', '94000', 0, '0', 'https://photo.teamrabbil.com/images/2023/08/15/macbooks-2048px-2349.jpeg', 1, 4.00, 'top', 1, 1, '2023-08-15 12:24:06', '2023-08-15 12:24:06'),
+(28, 'MacBook Air M1 8/256GB 13-inch Space Gray', 'MacBook Air M1 8/256GB 13-inch Space Gray', '94000', 0, '0', 'https://photo.teamrabbil.com/images/2023/08/15/macbooks-2048px-2349.jpeg', 1, 4.00, 'top', 1, 1, '2023-08-15 12:24:06', '2023-08-15 12:24:06'),
+(29, 'MacBook Air M1 8/256GB 13-inch Space Gray', 'MacBook Air M1 8/256GB 13-inch Space Gray', '94000', 0, '0', 'https://photo.teamrabbil.com/images/2023/08/15/macbooks-2048px-2349.jpeg', 1, 4.00, 'top', 1, 1, '2023-08-15 12:24:06', '2023-08-15 12:24:06'),
+(30, 'MacBook Air M1 8/256GB 13-inch Space Gray', 'MacBook Air M1 8/256GB 13-inch Space Gray', '94000', 0, '0', 'https://photo.teamrabbil.com/images/2023/08/15/macbooks-2048px-2349.jpeg', 1, 4.00, 'top', 1, 1, '2023-08-15 12:24:06', '2023-08-15 12:24:06'),
+(31, 'MacBook Air M1 8/256GB 13-inch Space Gray', 'MacBook Air M1 8/256GB 13-inch Space Gray', '94000', 0, '0', 'https://photo.teamrabbil.com/images/2023/08/15/macbooks-2048px-2349.jpeg', 1, 4.00, 'top', 1, 1, '2023-08-15 12:24:06', '2023-08-15 12:24:06'),
+(32, 'MacBook Air M1 8/256GB 13-inch Space Gray', 'MacBook Air M1 8/256GB 13-inch Space Gray', '94000', 0, '0', 'https://photo.teamrabbil.com/images/2023/08/15/macbooks-2048px-2349.jpeg', 1, 4.00, 'special', 1, 1, '2023-08-15 12:24:06', '2023-08-15 12:24:06'),
+(33, 'MacBook Air M1 8/256GB 13-inch Space Gray', 'MacBook Air M1 8/256GB 13-inch Space Gray', '94000', 0, '0', 'https://photo.teamrabbil.com/images/2023/08/15/macbooks-2048px-2349.jpeg', 1, 4.00, 'special', 1, 1, '2023-08-15 12:24:06', '2023-08-15 12:24:06'),
+(34, 'MacBook Air M1 8/256GB 13-inch Space Gray', 'MacBook Air M1 8/256GB 13-inch Space Gray', '94000', 0, '0', 'https://photo.teamrabbil.com/images/2023/08/15/macbooks-2048px-2349.jpeg', 1, 4.00, 'special', 1, 1, '2023-08-15 12:24:06', '2023-08-15 12:24:06'),
+(35, 'MacBook Air M1 8/256GB 13-inch Space Gray', 'MacBook Air M1 8/256GB 13-inch Space Gray', '94000', 0, '0', 'https://photo.teamrabbil.com/images/2023/08/15/macbooks-2048px-2349.jpeg', 1, 4.00, 'special', 1, 1, '2023-08-15 12:24:06', '2023-08-15 12:24:06'),
+(36, 'MacBook Air M1 8/256GB 13-inch Space Gray', 'MacBook Air M1 8/256GB 13-inch Space Gray', '94000', 0, '0', 'https://photo.teamrabbil.com/images/2023/08/15/macbooks-2048px-2349.jpeg', 1, 4.00, 'special', 1, 1, '2023-08-15 12:24:06', '2023-08-15 12:24:06'),
+(37, 'MacBook Air M1 8/256GB 13-inch Space Gray', 'MacBook Air M1 8/256GB 13-inch Space Gray', '94000', 0, '0', 'https://photo.teamrabbil.com/images/2023/08/15/macbooks-2048px-2349.jpeg', 1, 4.00, 'trending', 1, 1, '2023-08-15 12:24:06', '2023-08-15 12:24:06'),
+(38, 'MacBook Air M1 8/256GB 13-inch Space Gray', 'MacBook Air M1 8/256GB 13-inch Space Gray', '94000', 0, '0', 'https://photo.teamrabbil.com/images/2023/08/15/macbooks-2048px-2349.jpeg', 1, 4.00, 'trending', 1, 1, '2023-08-15 12:24:06', '2023-08-15 12:24:06'),
+(39, 'MacBook Air M1 8/256GB 13-inch Space Gray', 'MacBook Air M1 8/256GB 13-inch Space Gray', '94000', 0, '0', 'https://photo.teamrabbil.com/images/2023/08/15/macbooks-2048px-2349.jpeg', 1, 4.00, 'trending', 1, 1, '2023-08-15 12:24:06', '2023-08-15 12:24:06'),
+(40, 'MacBook Air M1 8/256GB 13-inch Space Gray', 'MacBook Air M1 8/256GB 13-inch Space Gray', '94000', 0, '0', 'https://photo.teamrabbil.com/images/2023/08/15/macbooks-2048px-2349.jpeg', 1, 4.00, 'trending', 1, 1, '2023-08-15 12:24:06', '2023-08-15 12:24:06'),
+(41, 'MacBook Air M1 8/256GB 13-inch Space Gray', 'MacBook Air M1 8/256GB 13-inch Space Gray', '94000', 0, '0', 'https://photo.teamrabbil.com/images/2023/08/15/macbooks-2048px-2349.jpeg', 1, 4.00, 'regular', 1, 1, '2023-08-15 12:24:06', '2023-08-15 12:24:06');
 
 -- --------------------------------------------------------
 
@@ -312,7 +315,8 @@ CREATE TABLE `product_carts` (
 --
 
 INSERT INTO `product_carts` (`id`, `user_id`, `product_id`, `color`, `size`, `qty`, `price`, `created_at`, `updated_at`) VALUES
-(4, 1, 5, 'Red', 'X', '5', '470000', '2023-08-06 13:15:30', '2023-08-06 13:15:30');
+(1, 1, 1, 'Red', 'X', '1', '94000', '2023-08-20 09:21:53', '2023-08-20 09:21:53'),
+(2, 1, 2, 'Red', 'X', '5', '470000', '2023-08-20 09:23:05', '2023-08-20 09:23:05');
 
 -- --------------------------------------------------------
 
@@ -339,7 +343,8 @@ CREATE TABLE `product_details` (
 --
 
 INSERT INTO `product_details` (`id`, `img1`, `img2`, `img3`, `img4`, `des`, `color`, `size`, `product_id`, `created_at`, `updated_at`) VALUES
-(1, 'https://static.gadgetandgear.com/image/250x250/fit/tmp/product/20230302_1677735164_773214.jpeg', 'https://static.gadgetandgear.com/image/250x250/fit/tmp/product/20230302_1677735164_773214.jpeg', 'https://static.gadgetandgear.com/image/250x250/fit/tmp/product/20230302_1677735164_773214.jpeg', 'https://static.gadgetandgear.com/image/250x250/fit/tmp/product/20230302_1677735164_773214.jpeg', '<table style=\"height:396px; width:1199px\">\r\n	<tbody>\r\n		<tr>\r\n			<td>Dimensions</td>\r\n			<td>Height: 0.45 inch (1.15 cm) Width: 13.40 inches (34.04 cm) Depth: 9.35 inches (23.76 cm)</td>\r\n		</tr>\r\n		<tr>\r\n			<td>Display</td>\r\n			<td>Liquid Retina display 15.3-inch (diagonal) LED-backlit display with IPS technology;1 2880-by-1864 native resolution at 224 pixels per inch with support for 1 billion colors 500 nits brightness Wide color (P3) True Tone technology</td>\r\n		</tr>\r\n		<tr>\r\n			<td>Weight</td>\r\n			<td>3.3 pounds (1.51 kg)</td>\r\n		</tr>\r\n		<tr>\r\n			<td>Chip</td>\r\n			<td>Apple M2 chip</td>\r\n		</tr>\r\n		<tr>\r\n			<td>CPU</td>\r\n			<td>8-core CPU with 4 performance cores and 4 efficiency cores</td>\r\n		</tr>\r\n		<tr>\r\n			<td>GPU</td>\r\n			<td>10-core GPU, 16-core Neural Engine</td>\r\n		</tr>\r\n		<tr>\r\n			<td>OS</td>\r\n			<td>macOS</td>\r\n		</tr>\r\n		<tr>\r\n			<td>Keyboard and Trackpad</td>\r\n			<td>Backlit Magic Keyboard with: 78 (U.S.) or 79 (ISO) keys including 12 full-height function keys and 4 arrow keys in an inverted-T arrangement Touch ID Ambient light sensor Force Touch trackpad for precise cursor control and pressure-sensing capabilities; enables Force clicks, accelerators, pressure-sensitive drawing, and Multi-Touch gestures</td>\r\n		</tr>\r\n		<tr>\r\n			<td>Wireless</td>\r\n			<td>Wi-Fi Wi-Fi 6 (802.11ax) Bluetooth Bluetooth 5.3</td>\r\n		</tr>\r\n		<tr>\r\n			<td>Audio</td>\r\n			<td>Six-speaker sound system with force-cancelling woofers Wide stereo sound Support for Spatial Audio when playing music or video with Dolby Atmos on built-in speakers Spatial Audio with dynamic head tracking when using AirPods (3rd generation), AirPods Pro, and AirPods Max Three-mic array with directional beamforming 3.5 mm headphone jack with advanced support for high-impedance headphones</td>\r\n		</tr>\r\n		<tr>\r\n			<td>Battery</td>\r\n			<td>66.5-watt‑hour lithium‑polymer battery</td>\r\n		</tr>\r\n		<tr>\r\n			<td>Charging</td>\r\n			<td>Fast-charge capable with 70W USB-C Power Adapter</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n', 'Red,Green,Blue', '13,14,15,16', 2, '2023-08-06 06:17:50', '2023-08-06 06:17:50');
+(1, 'https://photo.teamrabbil.com/images/2023/08/15/macbooks-2048px-2349.md.jpeg', 'https://photo.teamrabbil.com/images/2023/08/15/macbooks-2048px-2349.md.jpeg', 'https://photo.teamrabbil.com/images/2023/08/15/macbooks-2048px-2349.md.jpeg', 'https://photo.teamrabbil.com/images/2023/08/15/macbooks-2048px-2349.md.jpeg', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.', 'Red,Green,White', 'X,2X,3X', 1, '2023-08-20 13:49:16', '2023-08-20 14:23:39'),
+(2, 'https://photo.teamrabbil.com/images/2023/08/15/macbooks-2048px-2349.md.jpeg', 'https://photo.teamrabbil.com/images/2023/08/15/macbooks-2048px-2349.md.jpeg', 'https://photo.teamrabbil.com/images/2023/08/15/macbooks-2048px-2349.md.jpeg', 'https://photo.teamrabbil.com/images/2023/08/15/macbooks-2048px-2349.md.jpeg', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.', 'Red,Green,White', 'X,2X,3X', 2, '2023-08-20 13:49:16', '2023-08-20 14:23:39');
 
 -- --------------------------------------------------------
 
@@ -356,15 +361,6 @@ CREATE TABLE `product_reviews` (
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `product_reviews`
---
-
-INSERT INTO `product_reviews` (`id`, `description`, `rating`, `customer_id`, `product_id`, `created_at`, `updated_at`) VALUES
-(1, 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', '5', 1, 2, '2023-08-06 09:13:18', '2023-08-06 05:35:19'),
-(2, 'Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator', '5', 3, 2, '2023-08-06 09:13:18', '2023-08-06 09:13:18'),
-(4, 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', '5', 1, 8, '2023-08-06 05:35:47', '2023-08-06 05:35:47');
 
 -- --------------------------------------------------------
 
@@ -388,9 +384,9 @@ CREATE TABLE `product_sliders` (
 --
 
 INSERT INTO `product_sliders` (`id`, `title`, `short_des`, `price`, `image`, `product_id`, `created_at`, `updated_at`) VALUES
-(1, 'MacBook Air M1 8/256GB 13-inch Space Gray', 'MacBook Air M1 8/256GB 13-inch Space Gray', '$900USD', 'https://static.gadgetandgear.com/image/250x250/fit/tmp/product/20230302_1677735164_773214.jpeg', 2, '2023-08-05 16:33:28', '2023-08-06 06:14:34'),
-(3, 'MacBook Air M1 8/256GB 13-inch Space Gray', 'MacBook Air M1 8/256GB 13-inch Space Gray', '$900USD', 'https://static.gadgetandgear.com/image/250x250/fit/tmp/product/20230302_1677735164_773214.jpeg', 3, '2023-08-05 16:33:28', '2023-08-06 06:14:36'),
-(4, 'MacBook Air M1 8/256GB 13-inch Space Gray', 'MacBook Air M1 8/256GB 13-inch Space Gray', '$900USD', 'https://static.gadgetandgear.com/image/250x250/fit/tmp/product/20230302_1677735164_773214.jpeg', 4, '2023-08-05 16:33:28', '2023-08-06 06:14:39');
+(1, 'MacBook Air M1 New Addition', 'Apple MacBook Air 13.3-Inch Retina Display 8-core Apple M1 chip with 8GB RAM, 256GB SSD (MGND3) Gold', '$900USD', 'https://photo.teamrabbil.com/images/2023/08/15/banner.png', 1, '2023-08-15 12:42:46', '2023-08-15 12:42:46'),
+(3, 'MacBook Air M1 New Addition', 'Apple MacBook Air 13.3-Inch Retina Display 8-core Apple M1 chip with 8GB RAM, 256GB SSD (MGND3) Gold', '$900USD', 'https://photo.teamrabbil.com/images/2023/08/15/banner.png', 2, '2023-08-15 12:42:46', '2023-08-15 12:42:46'),
+(4, 'MacBook Air M1 New Addition', 'Apple MacBook Air 13.3-Inch Retina Display 8-core Apple M1 chip with 8GB RAM, 256GB SSD (MGND3) Gold', '$900USD', 'https://photo.teamrabbil.com/images/2023/08/15/banner.png', 3, '2023-08-15 12:42:46', '2023-08-15 12:42:46');
 
 -- --------------------------------------------------------
 
@@ -405,13 +401,6 @@ CREATE TABLE `product_wishes` (
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `product_wishes`
---
-
-INSERT INTO `product_wishes` (`id`, `product_id`, `user_id`, `created_at`, `updated_at`) VALUES
-(1, 2, 2, '2023-08-06 11:42:14', '2023-08-06 11:42:14');
 
 -- --------------------------------------------------------
 
@@ -433,13 +422,6 @@ CREATE TABLE `sslcommerz_accounts` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Dumping data for table `sslcommerz_accounts`
---
-
-INSERT INTO `sslcommerz_accounts` (`id`, `store_id`, `store_passwd`, `currency`, `success_url`, `fail_url`, `cancel_url`, `ipn_url`, `init_url`, `created_at`, `updated_at`) VALUES
-(1, 'teamr64c9e84055219', 'teamr64c9e84055219@ssl', 'BDT', 'http://yoursite.com/success.php', 'http://yoursite.com/fail.php', 'http://yoursite.com/cancel.php', 'http://yoursite.com/fail.php', 'https://sandbox.sslcommerz.com/gwprocess/v4/api.php', NULL, NULL);
-
 -- --------------------------------------------------------
 
 --
@@ -459,8 +441,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `email`, `otp`, `created_at`, `updated_at`) VALUES
-(1, 'engr.rabbil@yahoo.com', '0', '2023-08-06 00:27:08', '2023-08-06 13:14:57'),
-(2, 'engr.rabbil@outlook.com', '926998', '2023-08-06 00:27:08', '2023-08-06 00:44:15');
+(1, 'engr.rabbil@yahoo.com', '0', '2023-08-20 09:13:06', '2023-08-20 09:21:09');
 
 --
 -- Indexes for dumped tables
@@ -498,7 +479,8 @@ ALTER TABLE `invoices`
 ALTER TABLE `invoice_products`
   ADD PRIMARY KEY (`id`),
   ADD KEY `invoice_products_invoice_id_foreign` (`invoice_id`),
-  ADD KEY `invoice_products_product_id_foreign` (`product_id`);
+  ADD KEY `invoice_products_product_id_foreign` (`product_id`),
+  ADD KEY `invoice_products_user_id_foreign` (`user_id`);
 
 --
 -- Indexes for table `migrations`
@@ -513,6 +495,12 @@ ALTER TABLE `personal_access_tokens`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `personal_access_tokens_token_unique` (`token`),
   ADD KEY `personal_access_tokens_tokenable_type_tokenable_id_index` (`tokenable_type`,`tokenable_id`);
+
+--
+-- Indexes for table `policies`
+--
+ALTER TABLE `policies`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `products`
@@ -581,37 +569,37 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `brands`
 --
 ALTER TABLE `brands`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `customer_profiles`
 --
 ALTER TABLE `customer_profiles`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `invoices`
 --
 ALTER TABLE `invoices`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `invoice_products`
 --
 ALTER TABLE `invoice_products`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
@@ -620,16 +608,22 @@ ALTER TABLE `personal_access_tokens`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `policies`
+--
+ALTER TABLE `policies`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
 -- AUTO_INCREMENT for table `product_carts`
 --
 ALTER TABLE `product_carts`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `product_details`
@@ -641,7 +635,7 @@ ALTER TABLE `product_details`
 -- AUTO_INCREMENT for table `product_reviews`
 --
 ALTER TABLE `product_reviews`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `product_sliders`
@@ -653,19 +647,19 @@ ALTER TABLE `product_sliders`
 -- AUTO_INCREMENT for table `product_wishes`
 --
 ALTER TABLE `product_wishes`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `sslcommerz_accounts`
 --
 ALTER TABLE `sslcommerz_accounts`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Constraints for dumped tables
@@ -688,7 +682,8 @@ ALTER TABLE `invoices`
 --
 ALTER TABLE `invoice_products`
   ADD CONSTRAINT `invoice_products_invoice_id_foreign` FOREIGN KEY (`invoice_id`) REFERENCES `invoices` (`id`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `invoice_products_product_id_foreign` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `invoice_products_product_id_foreign` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `invoice_products_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON UPDATE CASCADE;
 
 --
 -- Constraints for table `products`

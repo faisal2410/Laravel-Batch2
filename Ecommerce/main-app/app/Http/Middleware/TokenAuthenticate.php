@@ -13,7 +13,7 @@ class TokenAuthenticate
         $token=$request->cookie('token');
         $result=JWTToken::ReadToken($token);
         if($result=="unauthorized"){
-           return redirect("/userLogin");
+           return redirect("/login");
         }
         else{
             $request->headers->set('email',$result->userEmail);

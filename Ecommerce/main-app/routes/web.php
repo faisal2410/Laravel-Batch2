@@ -16,8 +16,10 @@ use App\Http\Middleware\TokenAuthenticate;
 // Page Route
 
 Route::get("/",[HomeController::class,'HomePage']);
-
-
+Route::get("/product-details",[ProductController::class,'ProductDetailsPage']);
+Route::get("/login",[UserController::class,'LoginPage']);
+Route::get("/login-verify",[UserController::class,'LoginVerifyPage']);
+Route::get("/cart-list",[ProductController::class,'CartListPage']);
 
 
 // Brand List

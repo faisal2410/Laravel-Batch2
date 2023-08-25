@@ -30,7 +30,7 @@
                 <p>MacBook Air M1 8/256GB 13-inch Space Gray</p>
                 <p class="card-title my-3">$94000</p>
                 <div class="card-actions justify-end">
-                    <a class="btn normal-case btn-sm btn-outline btn-neutral">Buy Now</a>
+                    <a href="/product-details?id=${element['id']}" class="btn normal-case btn-sm btn-outline btn-neutral">Buy Now</a>
                 </div>
             </div>
         </div>`

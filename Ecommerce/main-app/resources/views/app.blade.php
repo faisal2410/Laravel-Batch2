@@ -10,11 +10,9 @@
 </head>
 <body>
 
-
 @include('component.AppBar')
 @yield('content')
 @include('component.Footer')
-
 
 </body>
 </html>
