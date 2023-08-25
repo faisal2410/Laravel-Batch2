@@ -24,15 +24,11 @@
     function SalesReport() {
         let FormDate = document.getElementById('FormDate').value;
         let ToDate = document.getElementById('ToDate').value;
-
         if(FormDate.length === 0 || ToDate.length === 0){
             errorToast("Date Range Required !")
         }else{
             window.open('/sales-report/'+FormDate+'/'+ToDate);
         }
-
-
-
     }
 
 </script>
