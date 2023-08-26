@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 25, 2023 at 11:25 PM
+-- Generation Time: Aug 26, 2023 at 11:35 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -42,12 +42,12 @@ CREATE TABLE `brands` (
 INSERT INTO `brands` (`id`, `brandName`, `brandImg`, `created_at`, `updated_at`) VALUES
 (1, 'Apple 1', 'https://photo.teamrabbil.com/images/2023/08/15/brands.jpeg', '2023-08-15 12:00:16', '2023-08-15 16:10:04'),
 (2, 'Apple 2', 'https://photo.teamrabbil.com/images/2023/08/15/brands.jpeg', '2023-08-15 12:00:16', '2023-08-15 16:10:05'),
-(3, 'Apple ', 'https://photo.teamrabbil.com/images/2023/08/15/brands.jpeg', '2023-08-15 12:00:16', '2023-08-15 12:00:16'),
-(4, 'Apple ', 'https://photo.teamrabbil.com/images/2023/08/15/brands.jpeg', '2023-08-15 12:00:16', '2023-08-15 12:00:16'),
-(5, 'Apple ', 'https://photo.teamrabbil.com/images/2023/08/15/brands.jpeg', '2023-08-15 12:00:16', '2023-08-15 12:00:16'),
-(6, 'Apple ', 'https://photo.teamrabbil.com/images/2023/08/15/brands.jpeg', '2023-08-15 12:00:16', '2023-08-15 12:00:16'),
-(7, 'Apple ', 'https://photo.teamrabbil.com/images/2023/08/15/brands.jpeg', '2023-08-15 12:00:16', '2023-08-15 12:00:16'),
-(8, 'Apple ', 'https://photo.teamrabbil.com/images/2023/08/15/brands.jpeg', '2023-08-15 12:00:16', '2023-08-15 12:00:16');
+(3, 'Apple 3', 'https://photo.teamrabbil.com/images/2023/08/15/brands.jpeg', '2023-08-15 12:00:16', '2023-08-25 21:31:54'),
+(4, 'Apple 4', 'https://photo.teamrabbil.com/images/2023/08/15/brands.jpeg', '2023-08-15 12:00:16', '2023-08-25 21:31:57'),
+(5, 'Apple 5', 'https://photo.teamrabbil.com/images/2023/08/15/brands.jpeg', '2023-08-15 12:00:16', '2023-08-25 21:32:00'),
+(6, 'Apple 6', 'https://photo.teamrabbil.com/images/2023/08/15/brands.jpeg', '2023-08-15 12:00:16', '2023-08-25 21:32:03'),
+(7, 'Apple 7', 'https://photo.teamrabbil.com/images/2023/08/15/brands.jpeg', '2023-08-15 12:00:16', '2023-08-25 21:32:05'),
+(8, 'Apple 8', 'https://photo.teamrabbil.com/images/2023/08/15/brands.jpeg', '2023-08-15 12:00:16', '2023-08-25 21:32:08');
 
 -- --------------------------------------------------------
 
@@ -69,15 +69,15 @@ CREATE TABLE `categories` (
 
 INSERT INTO `categories` (`id`, `categoryName`, `categoryImg`, `created_at`, `updated_at`) VALUES
 (1, 'Mac Book 1', 'https://photo.teamrabbil.com/images/2023/08/15/Phones--Tablets-01-3944.png', '2023-08-15 11:59:11', '2023-08-15 16:03:17'),
-(2, 'Mac Book2', 'https://photo.teamrabbil.com/images/2023/08/15/Phones--Tablets-01-3944.png', '2023-08-15 11:59:11', '2023-08-15 16:03:19'),
+(2, 'Mac Book 2', 'https://photo.teamrabbil.com/images/2023/08/15/Phones--Tablets-01-3944.png', '2023-08-15 11:59:11', '2023-08-25 21:32:41'),
 (3, 'Mac Book 3', 'https://photo.teamrabbil.com/images/2023/08/15/Phones--Tablets-01-3944.png', '2023-08-15 11:59:11', '2023-08-15 16:03:24'),
-(4, 'Mac Book', 'https://photo.teamrabbil.com/images/2023/08/15/Phones--Tablets-01-3944.png', '2023-08-15 11:59:11', '2023-08-15 11:59:11'),
-(5, 'Mac Book', 'https://photo.teamrabbil.com/images/2023/08/15/Phones--Tablets-01-3944.png', '2023-08-15 11:59:11', '2023-08-15 11:59:11'),
-(6, 'Mac Book', 'https://photo.teamrabbil.com/images/2023/08/15/Phones--Tablets-01-3944.png', '2023-08-15 11:59:11', '2023-08-15 11:59:11'),
-(7, 'Mac Book', 'https://photo.teamrabbil.com/images/2023/08/15/Phones--Tablets-01-3944.png', '2023-08-15 11:59:11', '2023-08-15 11:59:11'),
-(8, 'Mac Book', 'https://photo.teamrabbil.com/images/2023/08/15/Phones--Tablets-01-3944.png', '2023-08-15 11:59:11', '2023-08-15 11:59:11'),
-(9, 'Mac Book', 'https://photo.teamrabbil.com/images/2023/08/15/Phones--Tablets-01-3944.png', '2023-08-15 11:59:11', '2023-08-15 11:59:11'),
-(10, 'Mac Book', 'https://photo.teamrabbil.com/images/2023/08/15/Phones--Tablets-01-3944.png', '2023-08-15 11:59:11', '2023-08-15 11:59:11');
+(4, 'Mac Book 4', 'https://photo.teamrabbil.com/images/2023/08/15/Phones--Tablets-01-3944.png', '2023-08-15 11:59:11', '2023-08-25 21:32:43'),
+(5, 'Mac Book 5', 'https://photo.teamrabbil.com/images/2023/08/15/Phones--Tablets-01-3944.png', '2023-08-15 11:59:11', '2023-08-25 21:32:46'),
+(6, 'Mac Book 6', 'https://photo.teamrabbil.com/images/2023/08/15/Phones--Tablets-01-3944.png', '2023-08-15 11:59:11', '2023-08-25 21:32:48'),
+(7, 'Mac Book 7', 'https://photo.teamrabbil.com/images/2023/08/15/Phones--Tablets-01-3944.png', '2023-08-15 11:59:11', '2023-08-25 21:32:50'),
+(8, 'Mac Book 8', 'https://photo.teamrabbil.com/images/2023/08/15/Phones--Tablets-01-3944.png', '2023-08-15 11:59:11', '2023-08-25 21:32:52'),
+(9, 'Mac Book 9', 'https://photo.teamrabbil.com/images/2023/08/15/Phones--Tablets-01-3944.png', '2023-08-15 11:59:11', '2023-08-25 21:32:54'),
+(10, 'Mac Book 10', 'https://photo.teamrabbil.com/images/2023/08/15/Phones--Tablets-01-3944.png', '2023-08-15 11:59:11', '2023-08-25 21:32:57');
 
 -- --------------------------------------------------------
 
@@ -107,6 +107,13 @@ CREATE TABLE `customer_profiles` (
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `customer_profiles`
+--
+
+INSERT INTO `customer_profiles` (`id`, `cus_name`, `cus_add`, `cus_city`, `cus_state`, `cus_postcode`, `cus_country`, `cus_phone`, `cus_fax`, `ship_name`, `ship_add`, `ship_city`, `ship_state`, `ship_postcode`, `ship_country`, `ship_phone`, `user_id`, `created_at`, `updated_at`) VALUES
+(1, 'Rabbil Hasan', 'Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207', 'Dhaka', 'Dhaka', '1207', 'Bangladesh', '01785388919', '01785388919', 'Rabbil Hasan', 'Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207', 'Dhaka', 'Dhaka', '1207', 'Bangladesh', '01785388919', 1, '2023-08-25 21:34:14', '2023-08-25 21:34:14');
+
 -- --------------------------------------------------------
 
 --
@@ -129,6 +136,13 @@ CREATE TABLE `invoices` (
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `invoices`
+--
+
+INSERT INTO `invoices` (`id`, `total`, `vat`, `payable`, `cus_details`, `ship_details`, `tran_id`, `val_id`, `delivery_status`, `payment_status`, `user_id`, `created_at`, `updated_at`) VALUES
+(1, '470000', '14100', '484100', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207,City:Dhaka,Phone: 01785388919', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207 ,City:Dhaka ,Phone: 01785388919', '64e92882b5171', '0', 'Pending', 'Pending', 1, '2023-08-25 16:17:38', '2023-08-25 16:17:38');
+
 -- --------------------------------------------------------
 
 --
@@ -145,6 +159,13 @@ CREATE TABLE `invoice_products` (
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `invoice_products`
+--
+
+INSERT INTO `invoice_products` (`id`, `invoice_id`, `product_id`, `user_id`, `qty`, `sale_price`, `created_at`, `updated_at`) VALUES
+(1, 1, 4, 1, '5', '470000', '2023-08-25 16:17:38', '2023-08-25 16:17:38');
 
 -- --------------------------------------------------------
 
@@ -315,8 +336,7 @@ CREATE TABLE `product_carts` (
 --
 
 INSERT INTO `product_carts` (`id`, `user_id`, `product_id`, `color`, `size`, `qty`, `price`, `created_at`, `updated_at`) VALUES
-(1, 1, 1, 'Red', 'X', '1', '94000', '2023-08-20 09:21:53', '2023-08-20 09:21:53'),
-(2, 1, 2, 'Red', 'X', '5', '470000', '2023-08-20 09:23:05', '2023-08-20 09:23:05');
+(4, 1, 4, 'Red', 'X', '5', '470000', '2023-08-25 16:17:32', '2023-08-25 16:17:32');
 
 -- --------------------------------------------------------
 
@@ -362,6 +382,13 @@ CREATE TABLE `product_reviews` (
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `product_reviews`
+--
+
+INSERT INTO `product_reviews` (`id`, `description`, `rating`, `customer_id`, `product_id`, `created_at`, `updated_at`) VALUES
+(1, 'Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator', '5', 1, 1, '2023-08-25 21:35:23', '2023-08-25 21:35:23');
+
 -- --------------------------------------------------------
 
 --
@@ -402,6 +429,14 @@ CREATE TABLE `product_wishes` (
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `product_wishes`
+--
+
+INSERT INTO `product_wishes` (`id`, `product_id`, `user_id`, `created_at`, `updated_at`) VALUES
+(1, 1, 1, '2023-08-25 15:50:14', '2023-08-25 15:50:14'),
+(3, 3, 1, '2023-08-25 15:50:23', '2023-08-25 15:50:23');
+
 -- --------------------------------------------------------
 
 --
@@ -422,6 +457,13 @@ CREATE TABLE `sslcommerz_accounts` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `sslcommerz_accounts`
+--
+
+INSERT INTO `sslcommerz_accounts` (`id`, `store_id`, `store_passwd`, `currency`, `success_url`, `fail_url`, `cancel_url`, `ipn_url`, `init_url`, `created_at`, `updated_at`) VALUES
+(1, 'teamr64c9e84055219', 'teamr64c9e84055219@ssl', 'BDT', 'http://localhost:3000/PaymentSuccess', 'http://localhost:3000/PaymentFail', 'http://localhost:3000/PaymentCancel', 'http://localhost:3000/api/PaymentIPN', 'https://sandbox.sslcommerz.com/gwprocess/v4/api.php', '2023-08-25 21:35:23', '2023-08-25 21:35:23');
+
 -- --------------------------------------------------------
 
 --
@@ -441,7 +483,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `email`, `otp`, `created_at`, `updated_at`) VALUES
-(1, 'engr.rabbil@yahoo.com', '0', '2023-08-20 09:13:06', '2023-08-20 09:21:09');
+(1, 'engr.rabbil@yahoo.com', '0', '2023-08-20 09:13:06', '2023-08-25 16:16:18');
 
 --
 -- Indexes for dumped tables
@@ -581,19 +623,19 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT for table `customer_profiles`
 --
 ALTER TABLE `customer_profiles`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `invoices`
 --
 ALTER TABLE `invoices`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `invoice_products`
 --
 ALTER TABLE `invoice_products`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -623,7 +665,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `product_carts`
 --
 ALTER TABLE `product_carts`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `product_details`
@@ -635,7 +677,7 @@ ALTER TABLE `product_details`
 -- AUTO_INCREMENT for table `product_reviews`
 --
 ALTER TABLE `product_reviews`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `product_sliders`
@@ -647,13 +689,13 @@ ALTER TABLE `product_sliders`
 -- AUTO_INCREMENT for table `product_wishes`
 --
 ALTER TABLE `product_wishes`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `sslcommerz_accounts`
 --
 ALTER TABLE `sslcommerz_accounts`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `users`
